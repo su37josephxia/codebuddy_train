@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>2026 网易AI应用研发训练营 · 宣传长图</title>
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  html,body{background:#cfe1f7}
+  .poster{
+    width:750px;margin:0 auto;
+    font-family:"PingFang SC","Hiragino Sans GB","Source Han Sans SC","Noto Sans SC","Microsoft YaHei",sans-serif;
+    background:linear-gradient(180deg,#f2f7ff 0%,#e3eefd 26%,#cfe1f7 60%,#bcd6f5 100%);
+    position:relative;overflow:hidden;
+    padding:0 0 0 0;
+  }
+  /* ---------- 背景装饰 ---------- */
+  .deco{position:absolute;pointer-events:none}
+  .deco.d1{width:340px;height:340px;border-radius:50%;background:radial-gradient(circle at 35% 35%,rgba(255,255,255,.85),rgba(173,208,247,0) 68%);top:-90px;left:-110px}
+  .deco.d2{width:420px;height:420px;border-radius:50%;background:radial-gradient(circle at 60% 40%,rgba(190,218,250,.9),rgba(173,208,247,0) 70%);top:140px;right:-160px}
+  .deco.d3{width:300px;height:300px;border-radius:50%;background:radial-gradient(circle at 40% 40%,rgba(255,255,255,.6),rgba(173,208,247,0) 70%);top:980px;left:-120px}
+  .deco.d4{width:380px;height:380px;border-radius:50%;background:radial-gradient(circle at 55% 45%,rgba(186,216,250,.85),rgba(173,208,247,0) 70%);top:1680px;right:-150px}
+  .deco.ring{border:3px solid rgba(255,255,255,.55);border-radius:50%}
+  .deco.r1{width:56px;height:56px;top:300px;left:52px}
+  .deco.r2{width:30px;height:30px;top:356px;left:96px;border-width:2px}
+  .deco.r3{width:40px;height:40px;top:900px;right:70px;border-width:2px}
+  .deco.plus{color:rgba(255,255,255,.8);font-weight:300}
+  .deco.p1{top:250px;right:90px;font-size:34px}
+  .deco.p2{top:760px;left:60px;font-size:26px}
+  .deco.dot{background:rgba(255,255,255,.75);border-radius:50%}
+  .deco.dt1{width:10px;height:10px;top:420px;right:120px}
+  .deco.dt2{width:7px;height:7px;top:1180px;left:80px}
+
+  /* ---------- 顶部 ---------- */
+  .top{position:relative;z-index:2;padding:34px 40px 0;display:flex;justify-content:space-between;align-items:center}
+  .school{display:flex;align-items:center;gap:10px}
+  .school .seal{width:44px;height:44px;border-radius:50%;background:linear-gradient(145deg,#1e63d6,#0c3f97);display:flex;align-items:center;justify-content:center;box-shadow:0 4px 10px rgba(12,63,151,.25)}
+  .school .seal svg{width:26px;height:26px}
+  .school .name{font-size:17px;font-weight:600;color:#123c7e;letter-spacing:2px}
+  .cw{display:flex;align-items:center;gap:8px}
+  .cw .mark{width:26px;height:26px;border-radius:8px;background:linear-gradient(135deg,#2f7ff0,#0c3f97);position:relative}
+  .cw .mark::after{content:"";position:absolute;inset:6px;border-radius:3px;background:rgba(255,255,255,.9);transform:rotate(45deg)}
+  .cw .txt{font-size:19px;font-weight:800;color:#123c7e;letter-spacing:.5px;font-style:italic}
+
+  /* ---------- 标题区 ---------- */
+  .hero{position:relative;z-index:2;padding:44px 44px 0;text-align:center}
+  .hero .kicker{display:inline-block;font-size:22px;font-weight:700;color:#fff;letter-spacing:3px;
+    background:linear-gradient(90deg,#3b83ee,#1256c4);padding:10px 34px;border-radius:999px;
+    box-shadow:0 8px 18px rgba(18,86,196,.28)}
+  .hero h1{margin-top:26px;font-size:66px;font-weight:900;letter-spacing:2px;line-height:1.18;
+    background:linear-gradient(180deg,#2f83f2 0%,#1256c4 62%,#0a3a8f 100%);
+    -webkit-background-clip:text;background-clip:text;color:transparent;
+    filter:drop-shadow(0 10px 16px rgba(18,86,196,.18))}
+  .hero .sub{margin-top:16px;font-size:22px;font-weight:600;color:#3b6fb4;letter-spacing:6px}
+
+  /* ---------- 3D 插画区 ---------- */
+  .illus{position:relative;z-index:2;height:300px;margin-top:26px;display:flex;align-items:center;justify-content:center}
+  .stage{position:relative;width:430px;height:240px}
+  .panel{position:absolute;border-radius:18px}
+  .panel.p-1{width:250px;height:150px;left:40px;top:52px;background:linear-gradient(150deg,#ffffff,#dcebff);
+    box-shadow:0 24px 40px rgba(18,86,196,.22);transform:perspective(700px) rotateY(14deg) rotateX(4deg)}
+  .panel.p-2{width:250px;height:150px;left:130px;top:34px;background:linear-gradient(150deg,#eaf3ff,#c4dcfa);
+    box-shadow:0 22px 38px rgba(18,86,196,.2);transform:perspective(700px) rotateY(14deg) rotateX(4deg)}
+  .panel.p-3{width:250px;height:150px;left:220px;top:16px;background:linear-gradient(150deg,#3f8bf0,#1256c4);
+    box-shadow:0 26px 44px rgba(12,63,151,.35);transform:perspective(700px) rotateY(14deg) rotateX(4deg)}
+  .panel.p-3 .lines{padding:24px 26px;display:flex;flex-direction:column;gap:12px}
+  .panel.p-3 .lines i{display:block;height:10px;border-radius:5px;background:rgba(255,255,255,.75)}
+  .panel.p-3 .lines i:nth-child(1){width:70%}
+  .panel.p-3 .lines i:nth-child(2){width:92%}
+  .panel.p-3 .lines i:nth-child(3){width:55%}
+  .panel.p-2 .lines{padding:24px 26px;display:flex;flex-direction:column;gap:12px}
+  .panel.p-2 .lines i{display:block;height:10px;border-radius:5px;background:rgba(18,86,196,.28)}
+  .panel.p-2 .lines i:nth-child(1){width:88%}
+  .panel.p-2 .lines i:nth-child(2){width:62%}
+  .panel.p-2 .lines i:nth-child(3){width:78%}
+  .panel.p-1 .core{position:absolute;right:-26px;top:-30px;width:88px;height:88px;border-radius:22px;
+    background:linear-gradient(145deg,#57a1ff,#1256c4);box-shadow:0 16px 30px rgba(18,86,196,.4);
+    transform:rotate(12deg);display:flex;align-items:center;justify-content:center}
+  .panel.p-1 .core::after{content:"";width:34px;height:34px;border-radius:10px;background:rgba(255,255,255,.92);transform:rotate(45deg)}
+  .badge{position:absolute;left:-34px;top:-24px;z-index:3;background:linear-gradient(135deg,#ff9d4d,#ff7a1f);
+    color:#fff;font-size:24px;font-weight:800;letter-spacing:4px;padding:14px 30px;border-radius:14px;
+    box-shadow:0 14px 26px rgba(255,122,31,.35);transform:rotate(-6deg)}
+  .float.dice{position:absolute;right:-6px;bottom:-18px;width:58px;height:58px;border-radius:16px;
+    background:linear-gradient(145deg,#ffffff,#d7e7fd);box-shadow:0 14px 26px rgba(18,86,196,.28);
+    transform:rotate(18deg);display:flex;align-items:center;justify-content:center;color:#1256c4;font-weight:900;font-size:22px}
+
+  /* ---------- 白卡区块 ---------- */
+  .card{position:relative;z-index:2;margin:30px 40px 0;background:rgba(255,255,255,.94);border-radius:28px;
+    padding:34px 36px 36px;box-shadow:0 16px 34px rgba(18,86,196,.1)}
+  .tag{display:inline-block;font-size:24px;font-weight:800;color:#0c3f97;letter-spacing:3px;
+    background:linear-gradient(90deg,#dcecff,#eef5ff);border:1.5px solid #b9d5f8;
+    padding:10px 30px;border-radius:999px;margin-bottom:24px}
+  .card p.body{font-size:20px;line-height:1.9;color:#3d5a86;text-align:justify}
+  .card p.body b{color:#0c3f97}
+  .card p.body .hl{color:#1256c4;font-weight:700}
+
+  /* 课程价值三条 */
+  .value{display:flex;flex-direction:column;gap:18px;margin-top:4px}
+  .value .item{background:linear-gradient(180deg,#f4f9ff,#eaf3ff);border:1px solid #dbe9fb;border-radius:18px;padding:22px 26px}
+  .value .item h3{font-size:22px;font-weight:800;color:#0c3f97;letter-spacing:1px;margin-bottom:10px;display:flex;align-items:center;gap:10px}
+  .value .item h3::before{content:"";width:8px;height:22px;border-radius:4px;background:linear-gradient(180deg,#3b83ee,#1256c4)}
+  .value .item p{font-size:19px;line-height:1.8;color:#4a6a99;text-align:justify}
+
+  /* 课程内容列表 */
+  .agenda{display:flex;flex-direction:column;gap:16px;margin-top:4px}
+  .agenda .row{display:flex;align-items:center;gap:18px;background:linear-gradient(180deg,#f4f9ff,#eaf3ff);
+    border:1px solid #dbe9fb;border-radius:16px;padding:16px 22px}
+  .agenda .num{flex:0 0 auto;width:56px;height:44px;border-radius:12px;color:#fff;font-size:22px;font-weight:800;
+    background:linear-gradient(135deg,#3b83ee,#1256c4);display:flex;align-items:center;justify-content:center;
+    box-shadow:0 8px 16px rgba(18,86,196,.25)}
+  .agenda .txt{font-size:21px;font-weight:700;color:#143d7d;letter-spacing:1px}
+  .agenda .txt small{display:block;font-size:15px;font-weight:500;color:#6d8dbd;letter-spacing:.5px;margin-top:4px}
+
+  /* ---------- 活动信息 ---------- */
+  .info{position:relative;z-index:2;margin:30px 40px 0;background:linear-gradient(135deg,#1256c4,#0a3a8f);
+    border-radius:28px;padding:32px 36px;color:#fff;box-shadow:0 18px 36px rgba(12,63,151,.35)}
+  .info .row{display:flex;gap:16px;margin-bottom:18px;align-items:flex-start}
+  .info .row:last-child{margin-bottom:0}
+  .info .lab{flex:0 0 auto;font-size:20px;font-weight:700;letter-spacing:2px;color:#9fc3f5;
+    border:1px solid rgba(159,195,245,.5);border-radius:999px;padding:6px 18px}
+  .info .val{font-size:21px;font-weight:700;line-height:1.65;letter-spacing:1px}
+  .info .val small{display:block;font-size:16px;font-weight:400;color:#bcd6f7;margin-top:4px;letter-spacing:1px}
+  .info .note{margin-top:20px;border-top:1px dashed rgba(159,195,245,.45);padding-top:16px;
+    font-size:17px;color:#bcd6f7;letter-spacing:1px}
+
+  /* ---------- 底部 ---------- */
+  .foot{position:relative;z-index:2;margin-top:36px;background:linear-gradient(90deg,#0a3a8f,#1256c4);
+    padding:22px 0;text-align:center}
+  .foot .cw{display:inline-flex;align-items:center;gap:8px}
+  .foot .cw .mark{width:22px;height:22px;border-radius:7px;background:#fff;position:relative}
+  .foot .cw .mark::after{content:"";position:absolute;inset:5px;border-radius:3px;background:#1256c4;transform:rotate(45deg)}
+  .foot .cw .txt{font-size:20px;font-weight:800;color:#fff;letter-spacing:.5px;font-style:italic}
+  .bottom-pad{height:0}
+</style>
+</head>
+<body>
+<div class="poster">
+  <div class="deco d1"></div><div class="deco d2"></div><div class="deco d3"></div><div class="deco d4"></div>
+  <div class="deco ring r1"></div><div class="deco ring r2"></div><div class="deco ring r3"></div>
+  <div class="deco plus p1">+</div><div class="deco plus p2">+</div>
+  <div class="deco dot dt1"></div><div class="deco dot dt2"></div>
+
+  <!-- 顶部 logo -->
+  <div class="top">
+    <div class="school">
+      <div class="seal">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M12 2L4 6v6c0 5 3.4 8.6 8 10 4.6-1.4 8-5 8-10V6l-8-4z" fill="#fff" opacity=".92"/><path d="M9 12l2.2 2.2L15.5 9.8" stroke="#1256c4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+      </div>
+      <div class="name">衢州职业技术学院</div>
+    </div>
+    <div class="cw"><div class="mark"></div><div class="txt">CodeWave</div></div>
+  </div>
+
+  <!-- 标题 -->
+  <div class="hero">
+    <div class="kicker">CodeWave 人才培育计划</div>
+    <h1>网易AI工作台<br>应用训练营</h1>
+    <div class="sub">WORKBUDDY · DESIGN WORKBENCH</div>
+  </div>
+
+  <!-- 3D 插画 -->
+  <div class="illus">
+    <div class="stage">
+      <div class="panel p-2"></div>
+      <div class="panel p-1"><div class="core"></div></div>
+      <div class="panel p-3"><div class="lines"><i></i><i></i><i></i></div></div>
+      <div class="badge">AI 工作台</div>
+      <div class="float dice">AI</div>
+    </div>
+  </div>
+
+  <!-- 课程背景 -->
+  <div class="card">
+    <div class="tag">课程背景</div>
+    <p class="body">
+      网易 WorkBuddy 是一款<b>AI 智能工作台</b>，围绕设计场景提供 <span class="hl">Skill 技能、连接器、专家与专家团</span>
+      三大核心能力。本次训练营面向设计专业学生开设，摒弃纯案例堆砌，重点吃透 AI 工作台的底层逻辑，掌握功能选型、
+      搭配与协同方法，独立解决<span class="hl">设计创意、设计文案、作品集输出</span>三大核心问题。
+    </p>
+    <p class="body" style="margin-top:14px">
+      目标：帮助学生在课程作业、毕业设计与学科竞赛中真实用起来 AI 工作台，
+      把 AI 从<b>「会聊天」</b>变成<b>「能交付」</b>，为升学与求职积累一套可展示的数字化成果。
+    </p>
+  </div>
+
+  <!-- 课程价值 -->
+  <div class="card">
+    <div class="tag">课程价值</div>
+    <div class="value">
+      <div class="item">
+        <h3>贴近专业实际</h3>
+        <p>案例全部来自视觉传达、产品设计、环境艺术、数媒、UI/UX 五大设计专业场景，用真实课程作业与竞赛选题练手，学完就能用在当下的作业里。</p>
+      </div>
+      <div class="item">
+        <h3>强化搭配思维</h3>
+        <p>不逐条讲操作按钮，以「连接器拿素材 + Skill 定流程 + 专家保专业」的功能搭配思维为主线，7 场课程层层递进，最终独立搭建自己的 AI 工作台。</p>
+      </div>
+      <div class="item">
+        <h3>产出真实成果</h3>
+        <p>结业即交出个人作品集片段 1 份（含创意方案、设计说明、结构化排版），直接可用于课程作业提交与学科竞赛投递，让每一场学习都有看得见的产出。</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 课程内容 -->
+  <div class="card">
+    <div class="tag">课程内容 · 7 场系列培训</div>
+    <div class="agenda">
+      <div class="row"><div class="num">01</div><div class="txt">开篇：核心定位与设计场景总览<small>画出自己的「AI 工作台」功能地图</small></div></div>
+      <div class="row"><div class="num">02</div><div class="txt">Skill 技能深度拆解<small>用 Skill 完成 1 份标准化设计输出</small></div></div>
+      <div class="row"><div class="num">03</div><div class="txt">连接器深度拆解<small>让 AI 基于本人真实作品产出内容</small></div></div>
+      <div class="row"><div class="num">04</div><div class="txt">专家与专家团深度拆解<small>同一需求下的单专家 / 专家团对比</small></div></div>
+      <div class="row"><div class="num">05</div><div class="txt">AI 辅助设计创意与方案迭代<small>产出 3 套差异化创意方案</small></div></div>
+      <div class="row"><div class="num">06</div><div class="txt">AI 批量生成专业设计文案<small>完成含色彩释义与创新点的完整设计说明</small></div></div>
+      <div class="row"><div class="num">07</div><div class="txt">作品集与竞赛展板输出 + 结业<small>作品集片段 / 展板结构稿 1 份</small></div></div>
+    </div>
+  </div>
+
+  <!-- 活动信息 -->
+  <div class="info">
+    <div class="row">
+      <div class="lab">活动时间</div>
+      <div class="val">11 月 27 日（周四）下午 1:30 宣讲会<small>11 月 28 日 - 11 月 29 日 两天培训</small></div>
+    </div>
+    <div class="row">
+      <div class="lab">活动地点</div>
+      <div class="val">衢州职业技术学院<small>线下进行 · 全程实操演练</small></div>
+    </div>
+    <div class="note">结业产出：个人作品集片段 1 份 · 体现「连接器 + Skill + 专家」完整搭配链路</div>
+  </div>
+
+  <!-- 底部 -->
+  <div class="foot">
+    <div class="cw"><div class="mark"></div><div class="txt">CodeWave</div></div>
+  </div>
+  <div class="bottom-pad"></div>
+</div>
+</body>
+</html>
