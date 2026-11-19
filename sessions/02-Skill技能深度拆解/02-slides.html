@@ -1384,15 +1384,52 @@
 <section class="slide light" data-animate="stack-build" data-layout="S04">
   <div class="canvas-card">
 
-    <div class="chrome-min"><div class="l">METHOD · Skill 制作方法</div><div class="r">10 / 21</div></div>
-    <div style="flex:1;padding:0;display:flex;flex-direction:column;gap:2vh;position:relative;z-index:1">
-      <div data-anim="line" style="display:flex;align-items:flex-end;justify-content:space-between;gap:3vw"><div style="display:flex;flex-direction:column;gap:1.2vh"><div class="t-cat">制作方法</div><h2 style="font-family:var(--sans),var(--sans-zh);font-weight:200;font-size:min(4.8vw,8.4vh);line-height:1.02;letter-spacing:-.03em">Skill 制作方法</h2></div><div class="t-body-sm" style="max-width:32ch;text-align:right">不用凭空想<br>你重复做的事就是素材</div></div>
-      <div data-anim="up" style="flex:1;display:grid;grid-template-columns:repeat(3,1fr);gap:1.6vw;align-content:center">
-        <div class="sub-card"><div class="nb-corner">01</div><div class="ttl" style="margin-top:2.4vh">工作流提取</div><div class="t-cat accent" style="margin-bottom:1vh;">从现有的重复劳动里找素材</div><div class="desc">判断一件事值不值得提取。</div></div>
-        <div class="sub-card accent"><div class="nb-corner">02</div><div class="ttl" style="margin-top:2.4vh">四步法固化</div><div class="t-cat accent" style="margin-bottom:1vh;color:rgba(255,255,255,.75)">拆任务 → 定流程 → 写脚本 → 设规范</div><div class="desc">把流程写成 AI 能懂的 SOP。</div></div>
-        <div class="sub-card"><div class="nb-corner">03</div><div class="ttl" style="margin-top:2.4vh">最佳实践打磨</div><div class="t-cat accent" style="margin-bottom:1vh;">命中率 · 显性化 · 防翻车</div><div class="desc">让 Skill 真正好用。</div></div>
+    <div class="chrome-min"><div class="l">METHOD · Skill 制作方式</div><div class="r">10 / 21</div></div>
+    <div style="flex:1;padding:0;display:flex;flex-direction:column;gap:2.2vh;position:relative;z-index:1">
+      <div data-anim="line"><div class="t-cat">制作方式</div><h2 style="font-family:var(--sans),var(--sans-zh);font-weight:200;font-size:min(4.4vw,7.6vh);line-height:1.02;letter-spacing:-.03em;margin-top:1vh">Skill 的三种制作方式</h2></div>
+      <div data-anim="up" style="flex:1;display:grid;grid-template-columns:repeat(3,1fr);gap:1.4vw;align-content:stretch">
+
+        <div class="sub-card" style="border-top:3px solid var(--accent)">
+          <div style="display:flex;align-items:baseline;justify-content:space-between">
+            <div class="nb-corner">01</div>
+            <div style="font-family:var(--mono);font-size:max(11px,.66vw);letter-spacing:.16em;color:var(--accent)">本课采用</div>
+          </div>
+          <div class="ttl" style="margin-top:1.8vh;font-size:max(19px,1.62vw)">人工技能编排</div>
+          <div style="font-family:var(--mono);font-size:max(11px,.66vw);letter-spacing:.1em;color:var(--grey-3);margin-bottom:1.4vh">流程脚本化 · SOP 编码</div>
+          <div style="font-family:var(--sans),var(--sans-zh);font-size:max(14px,.88vw);line-height:1.6;color:var(--ink)">专家口述 SOP、判断分支和边界情况，写成系统提示词 + 分支判断 + 工具调用顺序。</div>
+          <div style="margin-top:1.6vh;display:flex;flex-direction:column;gap:.6vh;font-family:var(--sans),var(--sans-zh);font-size:max(13px,.84vw);line-height:1.5;color:var(--text-secondary)">
+            <div><span style="color:var(--accent);font-weight:600">优点</span>　可控、可审计、出错好改，稳定性最高</div>
+            <div><span style="color:var(--grey-3);font-weight:600">短板</span>　费人，隐性经验难写全，判断一多就难维护</div>
+            <div><span style="color:var(--ink);font-weight:600">适合</span>　单据审核、固定报表、工单处理</div>
+          </div>
+        </div>
+
+        <div class="sub-card">
+          <div class="nb-corner">02</div>
+          <div class="ttl" style="margin-top:1.8vh;font-size:max(19px,1.62vw)">工具封装 + 能力绑定</div>
+          <div style="font-family:var(--mono);font-size:max(11px,.66vw);letter-spacing:.1em;color:var(--grey-3);margin-bottom:1.4vh">工具化 Skill · 偏工程层</div>
+          <div style="font-family:var(--sans),var(--sans-zh);font-size:max(14px,.88vw);line-height:1.6;color:var(--ink)">把人本来就在用的软件、接口、脚本封装成可调用工具，再配上触发条件。</div>
+          <div style="margin-top:1.6vh;display:flex;flex-direction:column;gap:.6vh;font-family:var(--sans),var(--sans-zh);font-size:max(13px,.84vw);line-height:1.5;color:var(--text-secondary)">
+            <div><span style="color:var(--accent);font-weight:600">例</span>　对账 = 查数据库 + 跑表格宏 + 发消息，封成 3 个 tool</div>
+            <div><span style="color:var(--grey-3);font-weight:600">特点</span>　不复用人的思考，复用人的工具链路</div>
+            <div><span style="color:var(--ink);font-weight:600">适合</span>　系统集成度高、动作本身已经跑在软件里的场景</div>
+          </div>
+        </div>
+
+        <div class="sub-card">
+          <div class="nb-corner">03</div>
+          <div class="ttl" style="margin-top:1.8vh;font-size:max(19px,1.62vw)">逆向观察萃取</div>
+          <div style="font-family:var(--mono);font-size:max(11px,.66vw);letter-spacing:.1em;color:var(--grey-3);margin-bottom:1.4vh">技能蒸馏 · 与日志挖掘同源</div>
+          <div style="font-family:var(--sans),var(--sans-zh);font-size:max(14px,.88vw);line-height:1.6;color:var(--ink)">从操作日志、录屏、操作回放、对话记录里挖出高频动作与前后置条件，自动生成调用序列。</div>
+          <div style="margin-top:1.6vh;display:flex;flex-direction:column;gap:.6vh;font-family:var(--sans),var(--sans-zh);font-size:max(13px,.84vw);line-height:1.5;color:var(--text-secondary)">
+            <div><span style="color:var(--accent);font-weight:600">优点</span>　不用专家配合口述，存量数据越多越好用</div>
+            <div><span style="color:var(--grey-3);font-weight:600">短板</span>　日志不记录判断依据，容易只学到表面动作</div>
+            <div><span style="color:var(--ink);font-weight:600">适合</span>　专家没空配合、历史操作数据充足的场景</div>
+          </div>
+        </div>
+
       </div>
-      <div class="t-body-sm" style="border-top:1px solid var(--border-subtle);padding-top:1.4vh"><span style="color:var(--ink);font-weight:600">落点</span>：你重复做的事，就是你的第一个 Skill。</div>
+      <div class="t-body-sm" style="border-top:1px solid var(--border-subtle);padding-top:1.4vh"><span style="color:var(--ink);font-weight:600">取舍</span>：前两条靠人把流程交出来，第三条靠数据把流程挖出来；本课走第一条，从你重复做的事开始。</div>
     </div>
   </div>
 </section>
