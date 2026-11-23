@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>报名问卷 · 蛋仔夏日游园会</title>
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:#f5f6fa;color:#1a1c22;font-family:"PingFang SC","Microsoft YaHei",sans-serif;padding:32px 16px}
+  .wrap{max-width:720px;margin:0 auto}
+  .card{background:#fff;border-radius:14px;padding:32px 36px;box-shadow:0 2px 12px rgba(0,0,0,.06)}
+  .hero{background:linear-gradient(160deg,#ffd23f,#ff9f1c);border-radius:12px;padding:24px 26px;margin-bottom:26px;color:#fff}
+  .hero .tag{display:inline-block;background:rgba(255,255,255,.28);border-radius:6px;padding:4px 12px;font-size:12px;margin-bottom:12px}
+  .hero h1{font-size:27px;margin-bottom:8px;text-shadow:0 2px 0 rgba(224,122,0,.3)}
+  .hero p{font-size:14px;color:#fff8ea;line-height:1.6}
+  .hint{background:#fff8e6;border-left:4px solid #ffb800;border-radius:6px;padding:12px 16px;font-size:13px;color:#7a5a00;margin-bottom:24px}
+  .q{border-top:1px solid #edf0f4;padding-top:22px;margin-top:22px}
+  .qtitle{font-size:16px;font-weight:500;margin-bottom:14px}
+  .req{color:#ff6b6b;margin-left:4px}
+  .qtype{color:#a0a4ad;font-size:12px;font-weight:400;margin-left:8px}
+  .opt{display:block;border:1px solid #e3e6ec;border-radius:8px;padding:11px 15px;margin-bottom:9px;font-size:14px;color:#3d4048;cursor:pointer}
+  .opt:hover{border-color:#ffb800;background:#fffcf2}
+  .input{border:1px solid #e3e6ec;border-radius:8px;height:44px;padding:0 15px;width:100%;color:#b0b4bd;font-size:14px;background:#fff}
+  .blank{border:1px solid #e3e6ec;border-radius:8px;height:64px;padding:12px 15px;color:#b0b4bd;font-size:13px;width:100%}
+  .btn{background:#ffb800;color:#1a1c22;border:none;border-radius:8px;padding:13px 32px;font-size:15px;font-weight:500;margin-top:28px;cursor:pointer;width:100%}
+  .foot{text-align:center;color:#a0a4ad;font-size:12px;margin-top:18px;line-height:1.7}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="card">
+    <div class="hero">
+      <div class="tag">第 3 节产出 · 连接器接入真实材料</div>
+      <h1>蛋仔夏日游园会 · 报名</h1>
+      <p>8 月周末 13:00–20:00 ｜ XX 商场中庭 ｜ 免费报名，限量周边先到先得</p>
+    </div>
+    <div class="hint">✓ 活动时间、地点、亮点来自第 2 节策划方案；视觉素材来自游戏官网。填完即完成报名。</div>
+
+    <div class="q">
+      <div class="qtitle">1. 你的姓名<span class="req">*</span><span class="qtype">填空</span></div>
+      <div class="input">请填写姓名</div>
+    </div>
+
+    <div class="q">
+      <div class="qtitle">2. 手机号码<span class="req">*</span><span class="qtype">填空</span></div>
+      <div class="input">用于接收入场通知</div>
+    </div>
+
+    <div class="q">
+      <div class="qtitle">3. 几个人一起参加？<span class="req">*</span><span class="qtype">单选</span></div>
+      <div class="opt">A. 就我一个</div><div class="opt">B. 2 人（带一个朋友）</div>
+      <div class="opt">C. 3–4 人</div><div class="opt">D. 5 人以上</div>
+    </div>
+
+    <div class="q">
+      <div class="qtitle">4. 你打算哪个时段来？<span class="qtype">单选</span></div>
+      <div class="opt">A. 13:00–15:00（打卡为主）</div><div class="opt">B. 15:00–17:00（闯关挑战赛）</div>
+      <div class="opt">C. 17:00–20:00（兑换周边 + 试玩）</div>
+    </div>
+
+    <div class="q">
+      <div class="qtitle">5. 现场你最想玩什么？<span class="qtype">多选</span></div>
+      <div class="opt">□ 巨型蛋仔装置打卡</div><div class="opt">□ 闯关挑战赛</div>
+      <div class="opt">□ 毛绒周边兑换</div><div class="opt">□ 游戏试玩区</div>
+    </div>
+
+    <div class="q">
+      <div class="qtitle">6. 想对我们说点什么？<span class="qtype">开放题</span></div>
+      <div class="blank">选填，比如想看到的环节、想拿到的周边</div>
+    </div>
+
+    <button class="btn">提交报名</button>
+    <div class="foot">样例产出 · 第 02 组 ｜ 报名信息将作为第 4 节落地页报名区的数据来源</div>
+  </div>
+</div>
+</body>
+</html>
