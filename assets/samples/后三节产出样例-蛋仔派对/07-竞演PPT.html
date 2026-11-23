@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>竞演PPT · 蛋仔夏日游园会</title>
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:#141826;font-family:"PingFang SC","Microsoft YaHei",sans-serif;display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:100vh;padding:24px}
+  .stage{width:1024px;max-width:100%;aspect-ratio:16/9;background:#fffaf0;border-radius:16px;overflow:hidden;position:relative;box-shadow:0 20px 64px rgba(0,0,0,.5)}
+  .slide{display:none;width:100%;height:100%;padding:60px 68px;flex-direction:column;position:relative}
+  .slide.active{display:flex}
+  .kicker{display:inline-block;align-self:flex-start;background:#fff0c2;color:#a86a00;border-radius:999px;padding:6px 18px;font-size:14px;margin-bottom:22px}
+  h1{font-size:64px;line-height:1.1;color:#26262e}
+  h1 .hl{color:#ff8a00}
+  h2{font-size:40px;color:#26262e;margin-bottom:24px}
+  .sub{font-size:22px;color:#7a5a00;margin-top:16px}
+  .slogan{font-size:26px;color:#ff8a00;margin-top:auto;font-weight:500}
+  .page-num{position:absolute;right:30px;bottom:22px;color:#c9b98a;font-size:14px}
+  /* 通用网格 */
+  .grid{display:grid;gap:16px;flex:1;align-content:start}
+  .g2{grid-template-columns:1fr 1fr}
+  .g3{grid-template-columns:repeat(3,1fr)}
+  .box{background:#fff;border:2px solid #ffe3a3;border-radius:14px;padding:22px 24px}
+  .box b{display:block;color:#e07a00;font-size:20px;margin-bottom:8px}
+  .box p,.box span{font-size:16px;color:#4a4d56;line-height:1.6}
+  .box .num{font-size:36px;color:#ff8a00;font-weight:700}
+  /* 时间轴/列表 */
+  .list{display:flex;flex-direction:column;gap:14px;flex:1}
+  .list div{background:#fff;border-radius:12px;padding:16px 24px;font-size:18px;color:#3a3a42;display:flex;align-items:center;gap:16px}
+  .list em{font-style:normal;background:#ffb800;color:#fff;width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:17px;flex-shrink:0}
+  /* 链路 */
+  .flow{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-top:12px}
+  .flow span{background:#fff;border:2px solid #ffd23f;border-radius:10px;padding:14px 20px;font-size:17px;color:#5a3d00}
+  .flow i{font-style:normal;color:#ff8a00;font-size:22px}
+  /* 表格 */
+  table{width:100%;border-collapse:collapse;font-size:16px;flex:1}
+  th,td{text-align:left;padding:13px 16px;border-bottom:1px solid #ffe9bf;color:#4a4d56}
+  th{color:#e07a00;background:#fff5df}
+  .ctrl{display:flex;align-items:center;gap:20px;margin-top:20px;color:#fff}
+  .ctrl button{background:#ffb800;color:#26262e;border:none;border-radius:8px;padding:10px 26px;font-size:16px;cursor:pointer;font-weight:500}
+  .ctrl button:disabled{opacity:.35;cursor:not-allowed}
+  .dots{display:flex;gap:8px;flex-wrap:wrap;max-width:500px}
+  .dots i{width:10px;height:10px;border-radius:50%;background:#555865;cursor:pointer}
+  .dots i.on{background:#ffb800}
+  .hint{color:#7a7d8a;font-size:13px;margin-top:10px}
+</style>
+</head>
+<body>
+<div class="stage">
+  <!-- 1 封面 -->
+  <div class="slide active">
+    <div class="kicker">第 7 节产出 · 结业竞演</div>
+    <h1>蛋仔夏日<br><span class="hl">游园会</span></h1>
+    <p class="sub">第 02 组「蛋趣工作室」 ｜ 从想法到落地的完整活动</p>
+    <p class="slogan">陪蛋仔过夏天 · 一整天，玩个够</p>
+    <div class="page-num">1 / 10</div>
+  </div>
+  <!-- 2 概念 -->
+  <div class="slide">
+    <div class="kicker">活动概念</div>
+    <h2>办什么、给谁办、为什么</h2>
+    <div class="grid g3">
+      <div class="box"><b>办什么</b><p>一场线下夏日游园会，巨型装置 + 闯关赛 + 周边兑换</p></div>
+      <div class="box"><b>给谁办</b><p>18–28 岁、爱潮玩、有打卡习惯的蛋仔玩家</p></div>
+      <div class="box"><b>为什么</b><p>玩家的线下打卡与周边收集习惯强，适合轻量游园会</p></div>
+    </div>
+    <div class="page-num">2 / 10</div>
+  </div>
+  <!-- 3 策划 -->
+  <div class="slide">
+    <div class="kicker">第 2 节 · Skill 策划</div>
+    <h2>策划方案与目标</h2>
+    <div class="grid g3" style="margin-bottom:20px">
+      <div class="box" style="text-align:center"><div class="num">300+</div><p>到场目标</p></div>
+      <div class="box" style="text-align:center"><div class="num">500+</div><p>新增关注</p></div>
+      <div class="box" style="text-align:center"><div class="num">1000+</div><p>话题条数</p></div>
+    </div>
+    <div class="box"><b>三个亮点</b><p>① 巨型蛋仔装置打卡　② 闯关挑战赛（三轮）　③ 毛绒周边兑换</p></div>
+    <div class="page-num">3 / 10</div>
+  </div>
+  <!-- 4 报名物料 -->
+  <div class="slide">
+    <div class="kicker">第 3–4 节 · 连接器 + 专家团</div>
+    <h2>报名与宣传物料</h2>
+    <div class="grid g2">
+      <div class="box"><b>报名问卷</b><p>连接器接入方案与官方素材，做出报名表，收集到场信息</p></div>
+      <div class="box"><b>宣传文案</b><p>3 条统一句式 Slogan + 三平台短文 + 邀请函</p></div>
+      <div class="box"><b>海报长图</b><p>750px 线上长图，报名入口指向报名问卷</p></div>
+      <div class="box"><b>活动落地页</b><p>6 区块汇总，报名区嵌入报名问卷</p></div>
+    </div>
+    <div class="page-num">4 / 10</div>
+  </div>
+  <!-- 5 现场互动 -->
+  <div class="slide">
+    <div class="kicker">第 5 节 · 活动执行</div>
+    <h2>现场互动工具</h2>
+    <div class="grid g2">
+      <div class="box"><b>🎡 抽奖大转盘</b><p>8 扇区等概率抽奖，奖品来自方案奖品池；点击旋转并弹出结果</p></div>
+      <div class="box"><b>🥚 接蛋仔小游戏</b><p>30 秒限时点击，有计分和重玩；与蛋仔 IP 关联，现场即玩</p></div>
+    </div>
+    <div class="page-num">5 / 10</div>
+  </div>
+  <!-- 6 数据复盘 -->
+  <div class="slide">
+    <div class="kicker">第 6 节 · 活动复盘</div>
+    <h2>调研结论与数据</h2>
+    <div class="grid g3" style="margin-bottom:18px">
+      <div class="box" style="text-align:center"><div class="num">4.6</div><p>整体满意度</p></div>
+      <div class="box" style="text-align:center"><div class="num">4.8</div><p>闯关赛满意度</p></div>
+      <div class="box" style="text-align:center"><div class="num">91%</div><p>愿推荐朋友</p></div>
+    </div>
+    <div class="box"><b>三条建议</b><p>① 加大闯关赛投入　② 增加限定周边备货　③ 试办夜间场次配合抽奖</p></div>
+    <div class="page-num">6 / 10</div>
+  </div>
+  <!-- 7 组件链路 -->
+  <div class="slide">
+    <div class="kicker">知识掌握的核心证据</div>
+    <h2>三大组件怎么搭配</h2>
+    <div class="flow">
+      <span>开篇认知</span><i>→</i>
+      <span>Skill 定流程</span><i>→</i>
+      <span>连接器拿素材</span><i>→</i>
+      <span>专家团保专业</span>
+    </div>
+    <table style="margin-top:24px">
+      <tr><th>组件</th><th>在本次活动里做了什么</th></tr>
+      <tr><td>Skill</td><td>固化策划方案结构、统一文案句式、生成转盘与游戏流程</td></tr>
+      <tr><td>连接器</td><td>导入官方素材、方案文本、问卷数据，让输出基于真实材料</td></tr>
+      <tr><td>专家团</td><td>策划管结构、文案管表达、视觉管配色，多标准同时在场</td></tr>
+    </table>
+    <div class="page-num">7 / 10</div>
+  </div>
+  <!-- 8 团队 -->
+  <div class="slide">
+    <div class="kicker">团队协作</div>
+    <h2>五人分工 · 各司其职</h2>
+    <div class="list">
+      <div><em>组</em>组长 / 创意总监：定方向、把节奏、决策取舍</div>
+      <div><em>策</em>策划：活动策划方案、流程与预算</div>
+      <div><em>视</em>视觉：官方素材、配色把关、长图与转盘</div>
+      <div><em>文</em>文案：Slogan、短文、邀请函、竞演稿</div>
+      <div><em>筹</em>统筹：报名问卷、调研数据、成册路演</div>
+    </div>
+    <div class="page-num">8 / 10</div>
+  </div>
+  <!-- 9 成果 -->
+  <div class="slide">
+    <div class="kicker">完整交付</div>
+    <h2>一套带走的活动包</h2>
+    <div class="grid g3">
+      <div class="box"><b>筹备期</b><p>宣讲PPT · 策划方案 · 报名问卷 · 文案/长图/落地页</p></div>
+      <div class="box"><b>执行期</b><p>抽奖大转盘 · 互动小游戏</p></div>
+      <div class="box"><b>复盘期</b><p>调研问卷 · 数据分析报告 · 竞演PPT</p></div>
+    </div>
+    <p class="slogan" style="margin-top:36px">从想法到落地，一套完整的活动闭环</p>
+    <div class="page-num">9 / 10</div>
+  </div>
+  <!-- 10 结语 -->
+  <div class="slide">
+    <div class="kicker">Thank You</div>
+    <h1 style="font-size:56px">谢谢观看<br><span class="hl">一起滚进夏天</span></h1>
+    <p class="sub">第 02 组「蛋趣工作室」｜ 蛋仔派对 · 夏日游园会</p>
+    <p class="slogan">用 AI 工作台，把一场活动从想法做到落地</p>
+    <div class="page-num">10 / 10</div>
+  </div>
+</div>
+<div class="ctrl">
+  <button id="prev">← 上一页</button>
+  <div class="dots" id="dots"></div>
+  <button id="next">下一页 →</button>
+</div>
+<div class="hint">样例产出 · 第 02 组 ｜ 10 页可翻页，5 分钟路演</div>
+<script>
+  const slides=[...document.querySelectorAll('.slide')];
+  const dots=document.getElementById('dots');
+  let cur=0;
+  slides.forEach((_,i)=>{const d=document.createElement('i');if(i===0)d.className='on';d.onclick=()=>go(i);dots.appendChild(d)});
+  function go(i){cur=Math.max(0,Math.min(slides.length-1,i));slides.forEach((s,k)=>s.classList.toggle('active',k===cur));[...dots.children].forEach((d,k)=>d.classList.toggle('on',k===cur));document.getElementById('prev').disabled=cur===0;document.getElementById('next').disabled=cur===slides.length-1}
+  document.getElementById('prev').onclick=()=>go(cur-1);
+  document.getElementById('next').onclick=()=>go(cur+1);
+  document.addEventListener('keydown',e=>{if(e.key==='ArrowRight')go(cur+1);if(e.key==='ArrowLeft')go(cur-1)});
+  go(0);
+</script>
+</body>
+</html>
