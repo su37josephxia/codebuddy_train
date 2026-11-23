@@ -3,7 +3,7 @@
 > 面向 AI Agent 与协作者。**动手前先读本文件 + 根目录总纲**。
 > 项目：搞定设计师的 AI 工作台（7 场 × 2 小时系列培训）
 >
-> **项目铁律：任何更新完成后，立即 commit + push 到 `origin/main`，无需再向用户确认。详见 §8。**
+> **项目铁律：任何更新完成后，立即 commit + push 到开发分支 `origin/dev`，无需再向用户确认。禁止直接推送 `main`。详见 §8。**
 
 ## 1. 项目概览
 
@@ -152,17 +152,18 @@ codebuddy_train/
 3. **做演示稿前先对大纲**：读该场 `NN-讲义.md` → 按 §5.2–5.6 提炼逐页大纲（页码/标题/要点）→ 交用户确认，**未确认不写 HTML**。
 4. 只在目标场次目录内写产出；公共资源归入 `assets/` 或 `resources/`。
 5. 完成后更新该场 `README.md` 的待办勾选状态。
-6. **更新完成即提交并推送**（见 §8 铁律）：`git status` 确认范围 → `git add -A` → `git commit` → `git push`。不要留未提交改动到下次会话，也不要顺手提交无关改动。
+6. **更新完成即提交并推送到开发分支**（见 §8 铁律）：`git status` 确认范围 → `git add -A` → `git commit` → `git push origin dev`。**禁止直接推送 `main`**。不要留未提交改动到下次会话，也不要顺手提交无关改动。
 7. 远程走 **SSH**（`origin = git@github.com:su37josephxia/codebuddy_train.git`），不要用 HTTPS。
 
 ## 8. Git 约定
 
-> **项目铁律（用户 2026-11-16 确认）：每次对项目做任何更新后，必须立即提交并推送到远程，无需再次向用户确认。**
+> **项目铁律（用户 2026-11-23 更新）：每次对项目做任何更新后，必须立即提交并推送到开发分支 `dev`，无需再次向用户确认。禁止直接推送 `main`。**
 
-- 标准动作：`git status` → `git add -A` → `git commit -m "<类型>: <简述>"` → `git push`（走 SSH）。
+- 标准动作（在 `dev` 分支上）：`git status` → `git add -A` → `git commit -m "<类型>: <简述>"` → `git push origin dev`（走 SSH）。
 - 适用范围：新增 / 修改 / 删除文件、目录调整、文档更新、素材补充——**任何改动都算一次更新**。
 - 本文件（AGENTS.md）自身被修改时，同样要立即提交。
 - 推送失败必须如实告知用户并说明原因，不能静默跳过或假装成功。
-- 主分支 `main`，已跟踪 `origin/main`；远程为 SSH `git@github.com:su37josephxia/codebuddy_train.git`，**禁用 HTTPS**（本机已有 SSH 公钥）。
+- 分支约定：**`dev` 为日常开发分支，所有改动推这里；`main` 为主分支，仅在明确发布时由 `dev` 合并，禁止直接推送。** 本地起新会话先切到 `dev` 再动手。
+- 远程为 SSH `git@github.com:su37josephxia/codebuddy_train.git`，**禁用 HTTPS**（本机已有 SSH 公钥）。
 - 提交粒度建议：一场培训的材料一次提交，或按「新增/修订」分次提交。
 - 提交信息示例：`docs: 第 5 场演示稿与讲义`、`assets: 补充作品集样例图`。
