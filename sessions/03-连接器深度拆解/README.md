@@ -25,15 +25,26 @@
 
 ## 本目录放什么
 
+- `03-大纲.md` — 课程内容大纲（教学骨架，确认后据此写讲义）
+- `03-演示稿大纲.md` — 逐页演示稿大纲（从讲义提炼，确认后才改 HTML）
 - `03-slides.html` — 本场演示稿（复制 `templates/ppt-template.html` 后改写）
 - `03-讲义.md` / `03-作业.md` / `03-复盘.md`
 - 本场素材接入演示用例（方案文档 / 角色图 / 场景图 / PDF）
 
 通用演示样例放 `assets/samples/`；问卷规格放 `resources/handouts/`。
 
+## 官方参考资料
+
+| 资料 | 用途 | 链接 |
+|---|---|---|
+| 连接器 | 定义、四类能力、两种形态、三种启用方式、授权失效重连、权限边界 | https://www.workbuddy.cn/docs/workbuddy/From-Beginner-to-Expert-Guide/Function-Description/Connector |
+| WorkBuddy 简介 | 工作台定位、核心能力、适用场景 | https://www.workbuddy.cn/docs/workbuddy/Overview |
+
 ## 待办
 
-- [ ] 演示稿
+- [x] 课程内容大纲（`03-大纲.md`，2026-11-25 新建，待确认；按总纲时间表，含官网连接器口径）
 - [ ] 讲义 / 作业单 / 素材接入记录模板
+- [ ] 演示稿逐页大纲（确认后据此改 `03-slides.html`）
+- [ ] 演示稿
 - [ ] 各类文件格式的演示样例
 - [ ] 课后复盘记录
