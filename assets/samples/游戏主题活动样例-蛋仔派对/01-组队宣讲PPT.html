@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>组队宣讲PPT · 蛋仔夏日游园会</title>
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:#1c1e26;font-family:"PingFang SC","Microsoft YaHei",sans-serif;display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:100vh;padding:24px}
+  .stage{width:960px;max-width:100%;aspect-ratio:16/9;background:#fffaf0;border-radius:16px;overflow:hidden;position:relative;box-shadow:0 20px 60px rgba(0,0,0,.4)}
+  .slide{display:none;width:100%;height:100%;padding:64px 72px;position:relative}
+  .slide.active{display:flex;flex-direction:column}
+  .kicker{display:inline-block;align-self:flex-start;background:#fff0c2;color:#a86a00;border-radius:999px;padding:8px 20px;font-size:15px;font-weight:500;margin-bottom:28px}
+  h1{font-size:76px;line-height:1.08;color:#26262e;letter-spacing:.02em}
+  h1 .hl{color:#ff8a00}
+  .sub{font-size:26px;color:#7a5a00;margin-top:20px}
+  .slogan{font-size:30px;color:#ff8a00;font-weight:500;margin-top:auto}
+  .page-num{position:absolute;right:32px;bottom:24px;color:#c9b98a;font-size:14px}
+  /* 团队页 */
+  .team-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:8px}
+  .role{background:#fff;border:2px solid #ffe3a3;border-radius:14px;padding:20px 24px}
+  .role b{display:block;color:#e07a00;font-size:20px;margin-bottom:6px}
+  .role span{font-size:16px;color:#5b5d66}
+  /* 概念页 */
+  .concept{display:grid;grid-template-columns:1fr 1fr;gap:32px;margin-top:20px;flex:1}
+  .cbox{background:#fff;border-radius:14px;padding:26px 28px;border-left:6px solid #ffb800}
+  .cbox h3{font-size:19px;color:#e07a00;margin-bottom:12px}
+  .cbox p{font-size:17px;color:#4a4d56;line-height:1.7}
+  /* 亮点页 */
+  .hi{display:flex;flex-direction:column;gap:18px;margin-top:16px}
+  .hi div{background:#fff;border-radius:12px;padding:20px 26px;font-size:21px;color:#3a3a42;display:flex;align-items:center;gap:18px}
+  .hi em{font-style:normal;background:#ffb800;color:#fff;width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:19px;flex-shrink:0}
+  /* 计划页 */
+  .plan{display:flex;flex-direction:column;gap:14px;margin-top:16px}
+  .plan div{background:linear-gradient(90deg,#fff3d6,#fff);border-radius:12px;padding:18px 26px;font-size:19px;color:#4a4d56;display:flex;justify-content:space-between;align-items:center}
+  .plan span{color:#e07a00;font-weight:500;font-size:15px;background:#fff0c2;border-radius:999px;padding:5px 16px}
+  /* 封面装饰 */
+  .deco{position:absolute;right:-40px;top:-40px;width:220px;height:220px;border-radius:50%;background:rgba(255,184,0,.15)}
+  h2.title{font-size:48px;color:#26262e;margin-bottom:8px}
+  /* 控制 */
+  .ctrl{display:flex;align-items:center;gap:20px;margin-top:22px;color:#fff}
+  .ctrl button{background:#ffb800;color:#26262e;border:none;border-radius:8px;padding:10px 26px;font-size:16px;cursor:pointer;font-weight:500}
+  .ctrl button:disabled{opacity:.35;cursor:not-allowed}
+  .dots{display:flex;gap:8px}
+  .dots i{width:10px;height:10px;border-radius:50%;background:#555865;cursor:pointer}
+  .dots i.on{background:#ffb800}
+  .hint{color:#7a7d8a;font-size:13px;margin-top:12px}
+</style>
+</head>
+<body>
+<div class="stage">
+  <!-- 1 封面 -->
+  <div class="slide active">
+    <div class="deco"></div>
+    <div class="kicker">第 1 节产出 · 组队宣讲</div>
+    <h1>蛋仔夏日<br><span class="hl">游园会</span></h1>
+    <p class="sub">第 02 组「蛋趣工作室」 ｜ 认领游戏：蛋仔派对</p>
+    <p class="slogan">陪蛋仔过夏天 · 一整天，玩个够</p>
+    <div class="page-num">1 / 5</div>
+  </div>
+  <!-- 2 团队 -->
+  <div class="slide">
+    <div class="kicker">我们是谁</div>
+    <h2 class="title">团队与分工</h2>
+    <div class="team-grid">
+      <div class="role"><b>组长 / 创意总监</b><span>定方向、把节奏、最后拍板</span></div>
+      <div class="role"><b>策划</b><span>写活动方案、流程与预算</span></div>
+      <div class="role"><b>视觉</b><span>找官方素材、把关配色</span></div>
+      <div class="role"><b>文案</b><span>写主题名、Slogan 与短文</span></div>
+      <div class="role"><b>统筹（组长兼任）</b><span>管报名问卷、汇总物料</span></div>
+    </div>
+    <div class="page-num">2 / 5</div>
+  </div>
+  <!-- 3 概念 -->
+  <div class="slide">
+    <div class="kicker">办什么活动</div>
+    <h2 class="title">活动概念</h2>
+    <div class="concept">
+      <div class="cbox"><h3>为什么选蛋仔派对</h3><p>画风可爱、潮玩属性强，玩家有线下打卡和收集周边的习惯，适合做成一场轻量的夏日游园会。</p></div>
+      <div class="cbox"><h3>给谁办</h3><p>18–28 岁、喜欢潮玩与可爱画风、有线下打卡习惯的玩家，鼓励结伴而来。</p></div>
+    </div>
+    <div class="page-num">3 / 5</div>
+  </div>
+  <!-- 4 亮点 -->
+  <div class="slide">
+    <div class="kicker">凭什么值得来</div>
+    <h2 class="title">三个活动亮点</h2>
+    <div class="hi">
+      <div><em>1</em>巨型蛋仔装置，随手拍都出片</div>
+      <div><em>2</em>闯关挑战赛，赢了拿限定周边</div>
+      <div><em>3</em>毛绒玩偶兑换区，玩家最想要的周边</div>
+    </div>
+    <div class="page-num">4 / 5</div>
+  </div>
+  <!-- 5 计划 -->
+  <div class="slide">
+    <div class="kicker">接下来做什么</div>
+    <h2 class="title">要用 AI 产出这些物料</h2>
+    <div class="plan">
+      <div>活动策划方案 <span>第 2 节 · Skill</span></div>
+      <div>报名问卷 <span>第 3 节 · 连接器</span></div>
+      <div>宣传文案 + 海报长图 + 落地页 <span>第 4 节 · 专家团</span></div>
+    </div>
+    <div class="page-num">5 / 5</div>
+  </div>
+</div>
+<div class="ctrl">
+  <button id="prev">← 上一页</button>
+  <div class="dots" id="dots"></div>
+  <button id="next">下一页 →</button>
+</div>
+<div class="hint">样例产出 · 第 02 组 ｜ 点击箭头或圆点翻页，模拟真实宣讲场景</div>
+<script>
+  const slides=[...document.querySelectorAll('.slide')];
+  const dots=document.getElementById('dots');
+  let cur=0;
+  slides.forEach((_,i)=>{const d=document.createElement('i');if(i===0)d.className='on';d.onclick=()=>go(i);dots.appendChild(d)});
+  function go(i){cur=Math.max(0,Math.min(slides.length-1,i));slides.forEach((s,k)=>s.classList.toggle('active',k===cur));[...dots.children].forEach((d,k)=>d.classList.toggle('on',k===cur));document.getElementById('prev').disabled=cur===0;document.getElementById('next').disabled=cur===slides.length-1}
+  document.getElementById('prev').onclick=()=>go(cur-1);
+  document.getElementById('next').onclick=()=>go(cur+1);
+  go(0);
+</script>
+</body>
+</html>

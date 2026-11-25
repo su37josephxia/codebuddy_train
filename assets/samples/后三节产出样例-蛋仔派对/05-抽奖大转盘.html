@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>抽奖大转盘 · 蛋仔夏日游园会</title>
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:radial-gradient(circle at top,#fff4d6,#ffe0a3);min-height:100vh;font-family:"PingFang SC","Microsoft YaHei",sans-serif;display:flex;flex-direction:column;align-items:center;padding:32px 16px;color:#5a3d00}
+  .tag{background:#ff8a00;color:#fff;border-radius:999px;padding:7px 18px;font-size:13px;margin-bottom:16px}
+  h1{font-size:30px;color:#c25a00;margin-bottom:6px}
+  .sub{font-size:14px;color:#9a6a10;margin-bottom:24px}
+  .wheel-wrap{position:relative;width:400px;max-width:90vw;aspect-ratio:1}
+  .pointer{position:absolute;top:-10px;left:50%;transform:translateX(-50%);width:0;height:0;border-left:16px solid transparent;border-right:16px solid transparent;border-top:30px solid #e63946;z-index:3;filter:drop-shadow(0 2px 2px rgba(0,0,0,.2))}
+  canvas{width:100%;height:100%;border-radius:50%;box-shadow:0 8px 30px rgba(224,122,0,.35),0 0 0 10px #fff,0 0 0 14px #ffb800}
+  .spin{margin-top:28px;background:linear-gradient(180deg,#ffb800,#ff8a00);color:#fff;border:none;border-radius:999px;padding:15px 54px;font-size:19px;font-weight:600;cursor:pointer;box-shadow:0 5px 0 #c25a00;transition:transform .1s}
+  .spin:active{transform:translateY(4px);box-shadow:0 1px 0 #c25a00}
+  .spin:disabled{opacity:.6;cursor:not-allowed}
+  .result{margin-top:24px;min-height:56px;background:#fff;border:2px dashed #ffb800;border-radius:14px;padding:14px 30px;text-align:center;font-size:17px;color:#8a5a00;max-width:90vw}
+  .result b{font-size:22px;color:#e63946}
+  .foot{margin-top:20px;font-size:12px;color:#a87a20}
+</style>
+</head>
+<body>
+  <div class="tag">第 5 节产出 · 抽奖大转盘（可交互）</div>
+  <h1>蛋仔夏日游园会 · 幸运抽奖</h1>
+  <p class="sub">点击抽奖，手气好不好，转一下就知道</p>
+
+  <div class="wheel-wrap">
+    <div class="pointer"></div>
+    <canvas id="wheel" width="800" height="800"></canvas>
+  </div>
+
+  <button class="spin" id="spinBtn">开始抽奖</button>
+  <div class="result" id="result">奖品来自第 2 节方案的奖品池 · 每个扇区等概率</div>
+  <div class="foot">样例产出 · 第 02 组 ｜ 由「Skill 定抽奖流程 + 专家调视觉细节」生成</div>
+
+<script>
+  const prizes=['毛绒玩偶','限定徽章','贴纸明信片','谢谢参与','毛绒玩偶','游戏试玩券','限定徽章','谢谢参与'];
+  const colors=['#ffd23f','#ff8c42','#ff6b6b','#ffd23f','#ff8c42','#ff6b6b','#ffd23f','#ff8c42'];
+  const canvas=document.getElementById('wheel');
+  const ctx=canvas.getContext('2d');
+  const R=canvas.width/2;
+  const n=prizes.length;
+  const step=2*Math.PI/n;
+  let angle=0; // 当前旋转弧度
+
+  function draw(){
+    ctx.clearRect(0,0,canvas.width,canvas.height);
+    for(let i=0;i<n;i++){
+      const start=angle+i*step-Math.PI/2;
+      const end=start+step;
+      ctx.beginPath();
+      ctx.moveTo(R,R);
+      ctx.arc(R,R,R-8,start,end);
+      ctx.closePath();
+      ctx.fillStyle=colors[i];
+      ctx.fill();
+      ctx.strokeStyle='#fff';
+      ctx.lineWidth=3;
+      ctx.stroke();
+      // 文字
+      ctx.save();
+      ctx.translate(R,R);
+      ctx.rotate(start+step/2);
+      ctx.textAlign='right';
+      ctx.fillStyle='#fff';
+      ctx.font='bold 30px "PingFang SC","Microsoft YaHei",sans-serif';
+      ctx.shadowColor='rgba(0,0,0,.25)';
+      ctx.shadowBlur=4;
+      ctx.fillText(prizes[i],R-30,10);
+      ctx.restore();
+    }
+    // 中心圆
+    ctx.beginPath();
+    ctx.arc(R,R,58,0,2*Math.PI);
+    ctx.fillStyle='#fff';
+    ctx.fill();
+    ctx.fillStyle='#e63946';
+    ctx.font='bold 34px "PingFang SC","Microsoft YaHei",sans-serif';
+    ctx.textAlign='center';
+    ctx.textBaseline='middle';
+    ctx.fillText('GO',R,R);
+  }
+  draw();
+
+  const btn=document.getElementById('spinBtn');
+  const result=document.getElementById('result');
+  btn.onclick=()=>{
+    btn.disabled=true;
+    result.innerHTML='抽奖中…';
+    // 随机选中一个扇区
+    const idx=Math.floor(Math.random()*n);
+    // 指针在顶部(-PI/2)，让 idx 扇区中心转到顶部
+    const targetCenter=-idx*step; // 使 angle+idx*step ≡ 0 (mod 2PI)
+    // 归一化当前角度
+    let cur=angle%(2*Math.PI);
+    let delta=(targetCenter-cur)%(2*Math.PI);
+    if(delta<0)delta+=2*Math.PI;
+    const extra=Math.PI*2*5; // 多转5圈
+    const total=angle+extra+delta;
+    const duration=3600;
+    const startAngle=angle;
+    const t0=performance.now();
+    function frame(t){
+      const p=Math.min((t-t0)/duration,1);
+      const ease=1-Math.pow(1-p,4); // easeOutQuart
+      angle=startAngle+(total-startAngle)*ease;
+      draw();
+      if(p<1){requestAnimationFrame(frame)}
+      else{
+        const win=prizes[idx];
+        result.innerHTML=win==='谢谢参与'?'谢谢参与，下次好运！':'恭喜中奖：<b>'+win+'</b>';
+        btn.disabled=false;
+      }
+    }
+    requestAnimationFrame(frame);
+  };
+</script>
+</body>
+</html>

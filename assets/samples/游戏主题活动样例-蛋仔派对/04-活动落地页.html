@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>活动落地页 · 蛋仔夏日游园会</title>
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:#f6f7fa;color:#24262d;font-family:"PingFang SC","Microsoft YaHei",sans-serif;line-height:1.7}
+  .wrap{max-width:1080px;margin:0 auto;background:#fff;box-shadow:0 2px 20px rgba(0,0,0,.05)}
+  .hero{background:linear-gradient(135deg,#ffd23f,#ff8c42);padding:72px 60px;color:#fff;position:relative;overflow:hidden}
+  .hero:after{content:"";position:absolute;right:-100px;top:-100px;width:360px;height:360px;border-radius:50%;background:rgba(255,255,255,.14)}
+  .kicker{font-size:13px;letter-spacing:.2em;margin-bottom:18px;opacity:.9}
+  h1{font-size:52px;line-height:1.15;margin-bottom:18px}
+  .hero p{font-size:19px;opacity:.95;margin-bottom:28px}
+  .cta{display:inline-block;background:#fff;color:#e07a00;border-radius:8px;padding:14px 34px;font-weight:500;font-size:16px}
+  .nav{display:flex;gap:30px;padding:18px 60px;border-bottom:1px solid #eef0f4;font-size:14px;color:#6b6f79}
+  section{padding:52px 60px;border-bottom:1px solid #eef0f4}
+  h2{font-size:26px;margin-bottom:22px;color:#24262d}
+  .intro{font-size:16px;color:#555a65;max-width:760px}
+  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+  .card{background:#fff9ec;border:1px solid #ffe3a3;border-radius:12px;padding:22px}
+  .card b{display:block;color:#e07a00;font-size:17px;margin-bottom:8px}
+  .card span{font-size:14px;color:#666b75}
+  .timeline{border-left:2px solid #ffd23f;padding-left:24px}
+  .tl{margin-bottom:18px;position:relative}
+  .tl:before{content:"";position:absolute;left:-31px;top:8px;width:12px;height:12px;border-radius:50%;background:#ffb800}
+  .tl strong{display:block;font-size:15px}
+  .tl span{font-size:14px;color:#6b6f79}
+  .form{background:#fafbfc;border:1px solid #e8ebf0;border-radius:12px;padding:28px;max-width:620px}
+  .field{margin-bottom:16px}
+  .field label{display:block;font-size:14px;margin-bottom:6px;color:#4a4e58}
+  .field input{width:100%;border:1px solid #dfe3ea;border-radius:8px;padding:11px 14px;font-size:14px;background:#fff}
+  .submit{background:#ffb800;color:#24262d;border:none;border-radius:8px;padding:12px 28px;font-size:15px;font-weight:500;cursor:pointer}
+  .faq{border-top:1px solid #eef0f4;padding-top:14px;margin-top:14px}
+  .faq b{font-size:15px}
+  .faq p{font-size:14px;color:#6b6f79;margin-top:4px}
+  footer{background:#24262d;color:#a8abb4;text-align:center;padding:26px;font-size:13px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="hero">
+    <div class="kicker">第 4 节产出 · 物料③ · 活动落地页</div>
+    <h1>蛋仔夏日游园会</h1>
+    <p>陪蛋仔过夏天 · 一整天，玩个够</p>
+    <a class="cta" href="./03-报名问卷.html">立即报名 →</a>
+  </div>
+
+  <div class="nav"><span>活动介绍</span><span>现场亮点</span><span>日程</span><span>报名</span><span>常见问题</span></div>
+
+  <section>
+    <h2>活动介绍</h2>
+    <p class="intro">我们把蛋仔从屏幕里搬到了线下。两天时间，巨型装置打卡、闯关挑战、限定周边兑换，一次玩个够。这是蛋仔玩家自己的夏日聚会。</p>
+  </section>
+
+  <section>
+    <h2>现场亮点</h2>
+    <div class="cards">
+      <div class="card"><b>巨型装置打卡</b><span>随手拍都出片，线下打卡首选</span></div>
+      <div class="card"><b>闯关挑战赛</b><span>三组关卡，赢了拿限定周边</span></div>
+      <div class="card"><b>毛绒兑换区</b><span>玩家最想要的周边，数量有限</span></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>活动日程</h2>
+    <div class="timeline">
+      <div class="tl"><strong>13:00–13:30 签到</strong><span>入场，领攻略</span></div>
+      <div class="tl"><strong>13:30–15:00 打卡</strong><span>巨型装置自由拍照</span></div>
+      <div class="tl"><strong>15:00–17:00 闯关</strong><span>三组关卡挑战赛</span></div>
+      <div class="tl"><strong>17:00–18:30 兑换</strong><span>毛绒周边、合影</span></div>
+      <div class="tl"><strong>18:30–20:00 试玩</strong><span>现场组队，自由交流</span></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>立即报名</h2>
+    <p class="intro" style="margin-bottom:18px">报名入口用的是第 3 节做的问卷，点击下方按钮查看完整报名表：</p>
+    <div class="form">
+      <a class="cta" href="./03-报名问卷.html" style="text-decoration:none">打开报名问卷 →</a>
+    </div>
+  </section>
+
+  <section>
+    <h2>常见问题</h2>
+    <div class="faq"><b>Q：需要购票吗？</b><p>A：免费入场，部分挑战项目需现场排队。</p></div>
+    <div class="faq"><b>Q：周边怎么领？</b><p>A：闯关积分兑换，数量有限，先到先得。</p></div>
+    <div class="faq"><b>Q：可以带朋友吗？</b><p>A：当然，报名时填写同行人数即可。</p></div>
+  </section>
+
+  <footer>样例产出 · 第 02 组 · 由「连接器 + Skill + 专家团」协同生成</footer>
+</div>
+</body>
+</html>
