@@ -1278,7 +1278,7 @@
         </div>
         <div style="display:grid;grid-template-columns:6ch 1fr;gap:1.6vw;align-items:baseline;padding:1.55vh 0;border-bottom:1px solid rgba(255,255,255,.14)">
           <div style="font-family:var(--mono);font-weight:500;font-size:max(20px,1.8vw);color:var(--accent-bright)">03</div>
-          <div style="font-family:var(--sans),var(--sans-zh);font-size:min(2.1vw,3.9vh);line-height:1.3;color:var(--paper)">连接器定义与四类能力</div>
+          <div style="font-family:var(--sans),var(--sans-zh);font-size:min(2.1vw,3.9vh);line-height:1.3;color:var(--paper)">MCP ≠ 连接器 · 四类能力</div>
         </div>
         <div style="display:grid;grid-template-columns:6ch 1fr;gap:1.6vw;align-items:baseline;padding:1.55vh 0;border-bottom:1px solid rgba(255,255,255,.14)">
           <div style="font-family:var(--mono);font-weight:500;font-size:max(20px,1.8vw);color:var(--accent-bright)">04</div>
@@ -1294,43 +1294,45 @@
   </div>
 </section>
 
-<!-- ============ 03 · MCP 是什么（官方定义） ============ -->
+<!-- ============ 03 · MCP 是什么（开放通用协议标准） ============ -->
 <section class="slide split" data-animate="split-statement" data-layout="S03">
   <div class="canvas-card">
     <div class="split-half">
       <div class="half b-ink" style="padding:5.4vh 3.4vw 4vh;justify-content:space-between">
         <div class="chrome-min" style="margin-bottom:0"><div class="l">MCP · 是什么</div><div class="r">03 / 18</div></div>
-        <div style="display:flex;flex-direction:column;gap:1.7vh">
-          <div class="t-cat" style="color:rgba(255,255,255,.7)">模型上下文协议</div>
-          <h2 style="font-family:var(--sans),var(--sans-zh);font-weight:200;font-size:min(3.4vw,6.2vh);line-height:.98;letter-spacing:-.03em;color:#fff;margin:0">把外部工具<br>接进 AI</h2>
-          <div style="color:rgba(255,255,255,.9);font-family:var(--sans),var(--sans-zh);font-size:max(15px,1vw);line-height:1.6;border-top:1px solid rgba(255,255,255,.2);padding-top:1.6vh">MCP（Model Context Protocol）用于将外部工具和服务接入 WorkBuddy。它标准化了 AI 系统与数据源的交互方式，让模型拿到更准确的上下文。</div>
-          <div class="t-body-sm" style="color:rgba(255,255,255,.75);line-height:1.55">官方类比：MCP 可以理解为 AI 的「USB 接口」，像电脑通过 USB 连接外设。</div>
+        <div style="display:flex;flex-direction:column;gap:1.4vh">
+          <div class="t-cat" style="color:rgba(255,255,255,.7)">开放通用协议标准</div>
+          <h2 style="font-family:var(--sans),var(--sans-zh);font-weight:200;font-size:min(3.4vw,6.2vh);line-height:.98;letter-spacing:-.03em;color:#fff;margin:0">MCP 是一套<br>通用协议</h2>
+          <div style="color:rgba(255,255,255,.9);font-family:var(--sans),var(--sans-zh);font-size:max(15px,1.02vw);line-height:1.55;border-top:1px solid rgba(255,255,255,.2);padding-top:1.4vh">MCP（Model Context Protocol，模型上下文协议）规定 AI 与外部系统怎么互相发消息、发现工具、传数据。</div>
+          <div class="t-body-sm" style="color:rgba(255,255,255,.9);line-height:1.5">它是开放标准，不属于任何一家产品；Claude、Cursor 和各类 Agent 都在用同一套协议，脱离 WorkBuddy 照样能跑。</div>
+          <div class="t-meta" style="color:rgba(255,255,255,.62);line-height:1.5">USB-C 规范定义电压与通信格式，按规范做就能互通；规范本身不是设备。</div>
         </div>
       </div>
       <div class="half b-accent" style="padding:5.4vh 3.4vw 4vh;justify-content:space-between">
-        <div class="chrome-min" style="margin-bottom:0;color:rgba(255,255,255,.7)"><div class="l">MCP · 官方核心价值</div><div class="r">WORKBUDDY</div></div>
-        <div style="display:flex;flex-direction:column;gap:1.5vh">
+        <div class="chrome-min" style="margin-bottom:0;color:#fff"><div class="l">MCP · 组成与价值</div><div class="r">WORKBUDDY</div></div>
+        <div style="display:flex;flex-direction:column;gap:1.3vh">
           <h2 style="font-family:var(--sans),var(--sans-zh);font-weight:200;font-size:min(3.4vw,6.2vh);line-height:.98;letter-spacing:-.03em;color:#fff;margin:0">四项能力<br>一次看清</h2>
-          <div style="display:flex;flex-direction:column;gap:1vh;border-top:1px solid rgba(255,255,255,.3);padding-top:1.6vh">
-            <div style="display:grid;grid-template-columns:10ch 1fr;gap:1vw;color:rgba(255,255,255,.92);font-size:max(14px,.95vw);line-height:1.5"><span style="font-weight:600">上下文共享</span><span>把真实材料送进模型</span></div>
-            <div style="display:grid;grid-template-columns:10ch 1fr;gap:1vw;color:rgba(255,255,255,.92);font-size:max(14px,.95vw);line-height:1.5"><span style="font-weight:600">工具调用</span><span>模型手里多出一批工具</span></div>
-            <div style="display:grid;grid-template-columns:10ch 1fr;gap:1vw;color:rgba(255,255,255,.92);font-size:max(14px,.95vw);line-height:1.5"><span style="font-weight:600">可组合工作流</span><span>几步动作可以连起来做</span></div>
-            <div style="display:grid;grid-template-columns:10ch 1fr;gap:1vw;color:rgba(255,255,255,.92);font-size:max(14px,.95vw);line-height:1.5"><span style="font-weight:600">数据控制</span><span>数据在哪里跑可以管住</span></div>
+          <div style="display:flex;flex-direction:column;gap:.9vh;border-top:1px solid rgba(255,255,255,.3);padding-top:1.4vh">
+            <div style="opacity:1;display:grid;font-weight:500;grid-template-columns:10ch 1fr;gap:1vw;color:#fff;font-size:max(15px,1.02vw);line-height:1.5"><span style="font-weight:600">上下文共享</span><span>把真实材料送进模型</span></div>
+            <div style="opacity:1;display:grid;font-weight:500;grid-template-columns:10ch 1fr;gap:1vw;color:#fff;font-size:max(15px,1.02vw);line-height:1.5"><span style="font-weight:600">工具调用</span><span>模型手里多出一批工具</span></div>
+            <div style="opacity:1;display:grid;font-weight:500;grid-template-columns:10ch 1fr;gap:1vw;color:#fff;font-size:max(15px,1.02vw);line-height:1.5"><span style="font-weight:600">可组合工作流</span><span>几步动作可以连起来做</span></div>
+            <div style="opacity:1;display:grid;font-weight:500;grid-template-columns:10ch 1fr;gap:1vw;color:#fff;font-size:max(15px,1.02vw);line-height:1.5"><span style="font-weight:600">数据控制</span><span>数据在哪里跑可以管住</span></div>
           </div>
-          <div class="t-body-sm" style="color:rgba(255,255,255,.9);line-height:1.55">规矩统一之后，服务方实现一次，支持协议的应用都能接。</div>
+          <div class="t-body-sm" style="opacity:1;font-weight:500;color:#fff;line-height:1.5;border-top:1px solid rgba(255,255,255,.3);padding-top:1.1vh">协议由三部分组成：协议规范 / MCP Server（暴露工具与数据）/ MCP Client（对接 AI 宿主）。</div>
+          <div class="t-meta" style="opacity:1;font-weight:500;color:#fff;line-height:1.5">一个写好的 MCP 服务，所有支持 MCP 的 AI 都能直接用。</div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ============ 04 · 一次调用怎么走 ============ -->
+<!-- ============ 04 · 协议组成与一次调用 ============ -->
 <section class="slide light" data-animate="stack-build" data-layout="S04">
   <div class="canvas-card">
-    <div class="chrome-min"><div class="l">MCP · 一次调用</div><div class="r">04 / 18</div></div>
+    <div class="chrome-min"><div class="l">MCP · 组成与一次调用</div><div class="r">04 / 18</div></div>
     <div style="flex:1;padding:0;display:flex;flex-direction:column;gap:1.6vh;position:relative;z-index:1">
       <div data-anim="line" style="display:flex;flex-direction:column;gap:1.2vh">
-        <div class="t-cat accent">Host · Client · Server</div>
+        <div class="t-cat accent">协议规范 · Server · Client</div>
         <h2 style="font-family:var(--sans),var(--sans-zh);font-weight:200;font-size:min(4.6vw,8vh);line-height:1.02;letter-spacing:-.03em">一次调用怎么走</h2>
       </div>
       <div class="stack-row" style="grid-template-columns:1fr;grid-template-rows:repeat(4,1fr);gap:1.1vh;flex:1;margin-top:1.4vh;align-items:stretch">
@@ -1340,14 +1342,14 @@
           <div class="t-body-sm" style="flex:1">「读一下这个公开网页」。</div>
         </div>
         <div class="stack-block b-ink" style="flex-direction:row;align-items:center;gap:2vw;padding:1.4vh 1.8vw">
-          <div class="layer-nb" style="margin:0;width:18ch;white-space:nowrap">02 · 宿主 / 客户端</div>
+          <div class="layer-nb" style="margin:0;width:18ch;white-space:nowrap">02 · Host</div>
           <div style="font-weight:600;font-size:max(16px,1.12vw);width:18ch">WorkBuddy</div>
-          <div class="t-body-sm" style="flex:1;color:rgba(255,255,255,.88)">Host 判断要用哪个工具，Client 发起调用。</div>
+          <div class="t-body-sm" style="flex:1;color:rgba(255,255,255,.88)">Host 判断要用哪个工具，MCP Client 发起调用。</div>
         </div>
         <div class="stack-block b-accent" style="flex-direction:row;align-items:center;gap:2vw;padding:1.4vh 1.8vw">
           <div class="layer-nb" style="margin:0;width:18ch;white-space:nowrap">03 · MCP Server</div>
           <div style="font-weight:600;font-size:max(16px,1.12vw);width:18ch">公共 MCP</div>
-          <div class="t-body-sm" style="flex:1;color:rgba(255,255,255,.92)">暴露 fetch 工具，执行读网页。</div>
+          <div class="t-body-sm" style="flex:1;color:rgba(255,255,255,.92)">暴露工具与数据，执行读网页。</div>
         </div>
         <div class="stack-block b-grey" style="flex-direction:row;align-items:center;gap:2vw;padding:1.4vh 1.8vw">
           <div class="layer-nb" style="margin:0;width:18ch;white-space:nowrap">04 · 结果与回答</div>
@@ -1355,9 +1357,9 @@
           <div class="t-body-sm" style="flex:1">网页内容成为模型上下文，模型据此回答。</div>
         </div>
       </div>
-      <div style="display:flex;flex-direction:column;gap:.6vh;border-top:1px solid var(--border-subtle);padding-top:1.3vh";margin-bottom:1.8vh">
-        <div class="t-body-sm">公共 MCP 从哪来：腾讯云 MCP 市场一键安装、官方参考实现（Fetch / Filesystem / Git / Memory / Time 等）、MCP Registry。</div>
-        <div class="t-meta" style="color:var(--text-helper)">工具是挂上去的，接上前模型手里没有这件工具。</div>
+      <div style="display:flex;flex-direction:column;gap:.6vh;border-top:1px solid var(--border-subtle);padding-top:1.3vh;margin-bottom:1.8vh">
+        <div class="t-body-sm">组成：协议规范 + MCP Server（暴露工具与数据）+ MCP Client（对接 AI 宿主）；公共 MCP 来自腾讯云 MCP 市场、官方参考实现与 MCP Registry。</div>
+        <div class="t-meta" style="color:var(--text-helper)">工具是挂上去的，接上前模型手里没有这件工具；MCP 脱离 WorkBuddy 照样能跑。</div>
       </div>
     </div>
   </div>
@@ -1394,7 +1396,7 @@
           <div class="desc" style="margin-top:1vh">同一句话问两次：接上前、接上后。</div>
         </div>
       </div>
-      <div style="display:flex;flex-direction:column;gap:.8vh;border-top:2px solid var(--ink);padding-top:1.4vh";margin-bottom:1.8vh">
+      <div style="display:flex;flex-direction:column;gap:.8vh;border-top:2px solid var(--ink);padding-top:1.4vh;margin-bottom:1.8vh">
         <div class="t-cat">配置卡 · 只认四个词：服务名 / 命令 / 参数 / 类型</div>
         <div style="font-family:var(--mono);font-size:max(13px,.88vw);color:var(--text-secondary);line-height:1.5">{ "mcpServers": { "fetch": { "command": "uvx", "args": ["mcp-server-fetch"] } } }</div>
         <div class="t-body-sm">官方有用户级与项目级两种配置级别；课堂用可视化入口，学员只观察。网络不通时换 Time（纯本地）。</div>
@@ -1442,7 +1444,7 @@
           </div>
         </div>
       </div>
-      <div style="display:flex;flex-direction:column;gap:.6vh;border-top:1px solid var(--border-subtle);padding-top:1.2vh";margin-bottom:1.8vh">
+      <div style="display:flex;flex-direction:column;gap:.6vh;border-top:1px solid var(--border-subtle);padding-top:1.2vh;margin-bottom:1.8vh">
         <div class="t-body-sm">课堂只接只读、免账号免密钥的公开服务；不接需要 WebHook / Token 或能对外发消息的服务。</div>
         <div class="t-meta" style="color:var(--text-helper)">网络不通换 Time 或放录屏；课后删除配置、关闭启用、撤销信任。</div>
       </div>
@@ -1450,60 +1452,74 @@
   </div>
 </section>
 
-<!-- ============ 07 · 从 MCP 到连接器 ============ -->
-<section class="slide split" data-animate="split-statement" data-layout="S03">
+<!-- ============ 07 · MCP ≠ 连接器（核心区别） ============ -->
+<section class="slide light" data-animate="grid-reveal" data-layout="S15">
   <div class="canvas-card">
-    <div class="split-half">
-      <div class="half b-ink" style="padding:5.4vh 3.4vw 4vh;justify-content:space-between">
-        <div class="chrome-min" style="margin-bottom:0"><div class="l">CONNECTOR · 从协议到产品</div><div class="r">07 / 18</div></div>
-        <div style="display:flex;flex-direction:column;gap:1.6vh">
-          <div class="t-cat" style="color:rgba(255,255,255,.7)">协议层 · 在下面</div>
-          <h2 style="font-family:var(--sans),var(--sans-zh);font-weight:200;font-size:min(3.4vw,6.2vh);line-height:.98;letter-spacing:-.03em;color:#fff;margin:0">MCP 规定<br>怎么接</h2>
-          <div style="color:rgba(255,255,255,.9);font-family:var(--sans),var(--sans-zh);font-size:max(15px,1vw);line-height:1.6;border-top:1px solid rgba(255,255,255,.2);padding-top:1.6vh">怎么描述工具，怎么调用，怎么回传。刚才那段配置、状态灯与多出来的 fetch 都在这里。</div>
-          <div class="t-body-sm" style="color:rgba(255,255,255,.72);line-height:1.55">类比：MCP ≈ USB-C 接口规范，连接器 ≈ 一个具体的 U 盘。</div>
-          <div class="t-meta" style="color:rgba(255,255,255,.62);line-height:1.5">官方印证：腾讯乐享授权页写「通过乐享知识库 MCP」；「自定义连接器」本质是安装自定义 MCP 服务。</div>
+    <div class="chrome-min"><div class="l">CONNECTOR · 关系与区别</div><div class="r">07 / 18</div></div>
+    <div style="flex:1;padding:0;display:flex;flex-direction:column;gap:1.3vh;position:relative;z-index:1">
+      <div data-anim="line" style="display:flex;flex-direction:column;gap:.9vh">
+        <div class="t-cat accent">一句话讲清</div>
+        <h2 style="font-family:var(--sans),var(--sans-zh);font-weight:200;font-size:min(4.6vw,8vh);line-height:1.02;letter-spacing:-.03em">MCP ≠ 连接器</h2>
+      </div>
+      <div style="border-left:3px solid var(--accent);background:rgba(var(--accent-rgb),.07);padding:1vh 1.2vw;font-size:max(14px,.98vw);line-height:1.55">MCP 是通用通信标准（协议）；WorkBuddy 连接器是平台里的接入组件。很多连接器底层用 MCP 实现，<strong style="font-weight:600;color:var(--accent)">但连接器 ≠ MCP</strong>。</div>
+      <div data-anim="up" style="display:grid;grid-template-columns:1.5fr 1fr;gap:1.8vw;flex:1;min-height:0">
+        <div style="display:flex;flex-direction:column;border-top:2px solid var(--ink)">
+          <div style="display:grid;grid-template-columns:7ch 1fr 1.15fr;gap:.7vw;padding:.8vh 0;border-bottom:1px solid var(--border-strong)">
+            <div class="t-cat">项目</div><div class="t-cat">MCP</div><div class="t-cat">WorkBuddy 连接器</div>
+          </div>
+          <div style="display:grid;grid-template-columns:7ch 1fr 1.15fr;gap:.7vw;align-items:center;padding:.8vh 0;border-bottom:1px solid var(--border-subtle);flex:1;font-size:max(12px,.82vw);line-height:1.45"><div style="font-weight:600">本质</div><div>通用通信协议标准</div><div style="color:var(--accent);font-weight:600">WorkBuddy 平台上的接入组件</div></div>
+          <div style="display:grid;grid-template-columns:7ch 1fr 1.15fr;gap:.7vw;align-items:center;padding:.8vh 0;border-bottom:1px solid var(--border-subtle);flex:1;font-size:max(12px,.82vw);line-height:1.45"><div style="font-weight:600">归属</div><div>开放标准，不属于任何产品</div><div style="color:var(--accent);font-weight:600">WorkBuddy 平台专属概念</div></div>
+          <div style="display:grid;grid-template-columns:7ch 1fr 1.15fr;gap:.7vw;align-items:center;padding:.8vh 0;border-bottom:1px solid var(--border-subtle);flex:1;font-size:max(12px,.82vw);line-height:1.45"><div style="font-weight:600">范围</div><div>Claude、Cursor、各类 Agent 通用</div><div style="color:var(--accent);font-weight:600">只在 WorkBuddy 体系内使用</div></div>
+          <div style="display:grid;grid-template-columns:7ch 1fr 1.15fr;gap:.7vw;align-items:center;padding:.8vh 0;border-bottom:1px solid var(--border-subtle);flex:1;font-size:max(12px,.82vw);line-height:1.45"><div style="font-weight:600">包含内容</div><div>通信规则、工具 / 资源模型</div><div style="color:var(--accent);font-weight:600">协议 + 授权 + 权限 + 平台配置 + 元数据</div></div>
+          <div style="display:grid;grid-template-columns:7ch 1fr 1.15fr;gap:.7vw;align-items:center;padding:.8vh 0;border-bottom:1px solid var(--border-subtle);flex:1;font-size:max(12px,.82vw);line-height:1.45"><div style="font-weight:600">关系</div><div>可被连接器用作底层通信方式</div><div style="color:var(--accent);font-weight:600">MCP 的一种落地形态，不是唯一形态</div></div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:.8vh;justify-content:center">
+          <div class="t-cat" style="color:var(--accent)">完整链路</div>
+          <div class="t-body-sm" style="line-height:1.5">WorkBuddy Agent ↔ 连接器（MCP 实现）↔ MCP 协议 ↔ 外部 MCP 服务端 ↔ 腾讯文档 / 邮箱</div>
+          <div class="t-cat" style="color:var(--accent)">极简记忆版</div>
+          <div class="t-body-sm" style="line-height:1.5">MCP = 通用接口规范（语言）<br>连接器 = WorkBuddy 里的对接插件</div>
+          <div class="t-cat">三个别搞混</div>
+          <div class="t-meta" style="line-height:1.55;color:var(--text-secondary)">01　别把 MCP 当成连接器<br>02　别以为所有 MCP 都在 WorkBuddy 里用<br>03　Skill + CLI 型连接器不走 MCP</div>
+          <div class="t-meta" style="color:var(--text-helper);line-height:1.5">USB-C 规范 ≈ MCP；一根带芯片的数据线 ≈ 连接器。线基于规范，线不等于规范。</div>
         </div>
       </div>
-      <div class="half b-accent" style="padding:5.4vh 3.4vw 4vh;justify-content:space-between">
-        <div class="chrome-min" style="margin-bottom:0;color:rgba(255,255,255,.7)"><div class="l">CONNECTOR · 产品层封装</div><div class="r">WORKBUDDY</div></div>
-        <div style="display:flex;flex-direction:column;gap:1.6vh">
-          <div class="t-cat" style="color:rgba(255,255,255,.75)">产品层 · 在上面</div>
-          <h2 style="font-family:var(--sans),var(--sans-zh);font-weight:200;font-size:min(3.4vw,6.2vh);line-height:.98;letter-spacing:-.03em;color:#fff;margin:0">连接器决定<br>接什么</h2>
-          <div style="color:rgba(255,255,255,.92);font-family:var(--sans),var(--sans-zh);font-size:max(15px,1vw);line-height:1.6;border-top:1px solid rgba(255,255,255,.3);padding-top:1.6vh">授权与登录、启用与关闭开关、连接状态与失效重连、独立授权与最小权限、界面可见可管理、失败提示与重试。</div>
-          <div class="t-body-sm" style="color:#fff;border-left:2px solid rgba(255,255,255,.55);padding-left:1vw;line-height:1.55">协议管怎么接，连接器管接什么和能不能接。</div>
-        </div>
+      <div style="display:flex;flex-direction:column;gap:.5vh;border-top:1px solid var(--border-subtle);padding-top:1vh;margin-bottom:1.4vh">
+        <div class="t-body-sm">协议管怎么接，连接器管接什么和能不能接。</div>
+        <div class="t-meta" style="color:var(--text-helper)">官方印证：腾讯乐享授权页写「通过乐享知识库 MCP」；「自定义连接器」本质是安装自定义 MCP 服务。</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ============ 08 · 连接器是什么（官方定义） ============ -->
+<!-- ============ 08 · 连接器是什么（平台内接入组件） ============ -->
 <section class="slide split" data-animate="split-statement" data-layout="S03">
   <div class="canvas-card">
     <div class="split-half">
       <div class="half b-ink" style="padding:5.4vh 3.4vw 4vh;justify-content:space-between">
-        <div class="chrome-min" style="margin-bottom:0"><div class="l">CONNECTOR · 官方定义</div><div class="r">08 / 18</div></div>
-        <div style="display:flex;flex-direction:column;gap:2vh">
-          <div class="t-cat" style="color:rgba(255,255,255,.7)">官方文档 · 原文</div>
-          <h2 style="font-family:var(--sans),var(--sans-zh);font-weight:200;font-size:min(3.4vw,6.2vh);line-height:.98;letter-spacing:-.03em;color:#fff;margin:0">把外部服务<br>接进工作流</h2>
-          <div style="color:rgba(255,255,255,.92);font-family:var(--sans),var(--sans-zh);font-size:max(15px,1vw);line-height:1.62;border-top:1px solid rgba(255,255,255,.2);padding-top:1.8vh">连接器用于将 WorkBuddy 与外部服务对接，将外部数据和能力引入 AI 工作流。通过配置连接器，您可以让 WorkBuddy 在获得授权后访问和操作第三方服务，实现数据互通与能力扩展。</div>
-          <div style="display:flex;gap:.8vw;flex-wrap:wrap;margin-top:.4vh">
-            <span style="font-family:var(--mono);font-size:max(12px,.8vw);letter-spacing:.04em;color:rgba(255,255,255,.85);border:1px solid rgba(255,255,255,.35);padding:.5vh .7vw">AI 工作流</span>
-            <span style="font-family:var(--mono);font-size:max(12px,.8vw);letter-spacing:.04em;color:rgba(255,255,255,.85);border:1px solid rgba(255,255,255,.35);padding:.5vh .7vw">外部服务</span>
-            <span style="font-family:var(--mono);font-size:max(12px,.8vw);letter-spacing:.04em;color:#fff;border:1px solid rgba(255,255,255,.7);padding:.5vh .7vw">授权</span>
+        <div class="chrome-min" style="margin-bottom:0"><div class="l">CONNECTOR · 是什么</div><div class="r">08 / 18</div></div>
+        <div style="display:flex;flex-direction:column;gap:1.7vh">
+          <div class="t-cat" style="color:rgba(255,255,255,.7)">WorkBuddy 平台内的接入组件</div>
+          <h2 style="font-family:var(--sans),var(--sans-zh);font-weight:200;font-size:min(3.4vw,6.2vh);line-height:.98;letter-spacing:-.03em;color:#fff;margin:0">把外部服务<br>封装起来</h2>
+          <div style="color:rgba(255,255,255,.92);font-family:var(--sans),var(--sans-zh);font-size:max(14px,.95vw);line-height:1.6;border-top:1px solid rgba(255,255,255,.2);padding-top:1.6vh">连接器用于将 WorkBuddy 与外部服务对接，将外部数据和能力引入 AI 工作流。通过配置连接器，您可以让 WorkBuddy 在获得授权后访问和操作第三方服务，实现数据互通与能力扩展。</div>
+          <div style="display:flex;gap:.8vw;flex-wrap:wrap">
+            <span style="font-family:var(--mono);font-size:max(12px,.8vw);color:rgba(255,255,255,.85);border:1px solid rgba(255,255,255,.35);padding:.5vh .7vw">AI 工作流</span>
+            <span style="font-family:var(--mono);font-size:max(12px,.8vw);color:rgba(255,255,255,.85);border:1px solid rgba(255,255,255,.35);padding:.5vh .7vw">外部服务</span>
+            <span style="font-family:var(--mono);font-size:max(12px,.8vw);color:#fff;border:1px solid rgba(255,255,255,.7);padding:.5vh .7vw">授权</span>
           </div>
+          <div class="t-body-sm" style="color:rgba(255,255,255,.85);line-height:1.5">它把外部系统封装好，管理授权、权限与连接配置；界面上点「添加连接器 → 授权」，操作的就是它。</div>
         </div>
       </div>
       <div class="half b-accent" style="padding:5.4vh 3.4vw 4vh;justify-content:space-between">
-        <div class="chrome-min" style="margin-bottom:0;color:rgba(255,255,255,.7)"><div class="l">CONNECTOR · 官方补充</div><div class="r">WORKBUDDY</div></div>
-        <div style="display:flex;flex-direction:column;gap:1.8vh">
-          <h2 style="font-family:var(--sans),var(--sans-zh);font-weight:200;font-size:min(3.4vw,6.2vh);line-height:.98;letter-spacing:-.03em;color:#fff;margin:0">官方还说了<br>三件事</h2>
-          <div style="display:flex;flex-direction:column;gap:1.3vh;border-top:1px solid rgba(255,255,255,.3);padding-top:1.8vh">
-            <div style="display:grid;grid-template-columns:7ch 1fr;gap:1vw;color:rgba(255,255,255,.92);font-size:max(14px,.95vw);line-height:1.55"><span style="font-family:var(--mono);opacity:.75">形态</span><span>MCP + CLI（标准化协议）与 Skill + CLI（内置脚本），数据收集与权限边界一致。</span></div>
-            <div style="display:grid;grid-template-columns:7ch 1fr;gap:1vw;color:rgba(255,255,255,.92);font-size:max(14px,.95vw);line-height:1.55"><span style="font-family:var(--mono);opacity:.75">已支持</span><span>QQ 邮箱、腾讯文档、腾讯乐享、腾讯会议、TAPD、腾讯网盘等，另支持自定义连接器。</span></div>
-            <div style="display:grid;grid-template-columns:7ch 1fr;gap:1vw;color:rgba(255,255,255,.92);font-size:max(14px,.95vw);line-height:1.55"><span style="font-family:var(--mono);opacity:.75">条款</span><span>新增连接器后，相关隐私协议条款将同步更新。</span></div>
+        <div class="chrome-min" style="margin-bottom:0;color:#fff"><div class="l">CONNECTOR · 两种形态与平台能力</div><div class="r">WORKBUDDY</div></div>
+        <div style="display:flex;flex-direction:column;gap:1.3vh">
+          <h2 style="font-family:var(--sans),var(--sans-zh);font-weight:200;font-size:min(3.4vw,6.2vh);line-height:.98;letter-spacing:-.03em;color:#fff;margin:0">平台里多做<br>的几件事</h2>
+          <div style="display:flex;flex-direction:column;gap:1vh;border-top:1px solid rgba(255,255,255,.3);padding-top:1.4vh">
+            <div style="opacity:1;display:grid;font-weight:500;grid-template-columns:15ch 1fr;gap:1vw;color:#fff;font-size:max(15px,1.02vw);line-height:1.5"><span style="font-family:var(--mono);opacity:.8">MCP 型</span><span>底层走 MCP 协议，主流形态。</span></div>
+            <div style="opacity:1;display:grid;font-weight:500;grid-template-columns:15ch 1fr;gap:1vw;color:#fff;font-size:max(15px,1.02vw);line-height:1.5"><span style="font-family:var(--mono);opacity:.8">Skill + CLI 型</span><span>内置脚本直接对接，<strong style="color:#fff">不走 MCP</strong>。</span></div>
           </div>
-          <div class="t-body-sm" style="color:rgba(255,255,255,.9);line-height:1.55;border-top:1px solid rgba(255,255,255,.3);padding-top:1.3vh">课堂用的腾讯问卷连接器是会话内官方插件，授权以现场页面提示为准。</div>
+          <div class="t-body-sm" style="opacity:1;font-weight:500;color:#fff;line-height:1.5;border-top:1px solid rgba(255,255,255,.3);padding-top:1.2vh">平台侧多出来：认证与授权、权限控制、元信息、工具过滤、启用与关闭、状态与失效重连。</div>
+          <div class="t-meta" style="opacity:1;font-weight:500;color:#fff;line-height:1.5;border-left:2px solid rgba(255,255,255,.55);padding-left:1vw">一根 USB-C 数据线，带芯片与认证管理；基于规范但是具体实物，线不等于规范。</div>
+          <div class="t-meta" style="opacity:1;font-weight:500;color:#fff;line-height:1.5">已支持 QQ 邮箱、腾讯文档、腾讯乐享、腾讯会议、TAPD、腾讯网盘；新增后隐私条款同步更新。腾讯问卷连接器是会话内插件，授权以现场页面提示为准。</div>
         </div>
       </div>
     </div>
@@ -1880,7 +1896,7 @@
         <div style="display:flex;flex-direction:column;gap:1.8vh">
           <div class="t-cat" style="color:rgba(255,255,255,.75)">带走三样</div>
           <h2 style="font-family:var(--sans),var(--sans-zh);font-weight:200;font-size:min(3.4vw,6.2vh);line-height:1.15;letter-spacing:-.025em;color:#fff;margin:0">一条接真实材料<br>的通道</h2>
-          <div class="t-body-sm" style="color:rgba(255,255,255,.9);line-height:1.85">一份能发出去的在线问卷<br>一句「协议管怎么接，连接器管接什么」</div>
+          <div class="t-body-sm" style="color:rgba(255,255,255,.9);line-height:1.85">一份能发出去的在线问卷<br>一句「MCP ≠ 连接器」</div>
         </div>
         <div style="display:flex;flex-direction:column;gap:1.6vh;border-left:1px solid rgba(255,255,255,.35);padding-left:2vw">
           <div class="t-cat" style="color:rgba(255,255,255,.75)">当堂收口</div>
@@ -1895,6 +1911,14 @@
     </div>
   </div>
 </section>
+
+
+
+
+
+
+
+
 
 
 
