@@ -1362,65 +1362,87 @@
   </div>
 </section>
 
-<!-- ============ 05 · 连接器是什么 ============ -->
+<!-- ============ 05 · 连接器是什么（官方定义） ============ -->
 <section class="slide split" data-animate="split-statement" data-layout="S03">
   <div class="canvas-card">
     <div class="split-half">
       <div class="half b-ink" style="padding:5.4vh 3.4vw 4vh;justify-content:space-between">
-        <div class="chrome-min" style="margin-bottom:0"><div class="l">PRINCIPLE · 定义</div><div class="r">05 / 20</div></div>
+        <div class="chrome-min" style="margin-bottom:0"><div class="l">PRINCIPLE · 官方定义</div><div class="r">05 / 20</div></div>
         <div style="display:flex;flex-direction:column;gap:2vh">
-          <div class="t-cat" style="color:rgba(255,255,255,.7)">与外部服务对接</div>
-          <h2 style="font-family:var(--sans),var(--sans-zh);font-weight:200;font-size:min(3.4vw,6.2vh);line-height:.98;letter-spacing:-.03em;color:#fff;margin:0">把数据和能力<br>接进工作流</h2>
-          <div style="color:rgba(255,255,255,.9);font-family:var(--sans),var(--sans-zh);font-size:max(16px,1.05vw);line-height:1.65;border-top:1px solid rgba(255,255,255,.2);padding-top:1.8vh">连接器把外部服务的数据与能力引入工作流，在授权前提下访问和操作第三方服务。</div>
+          <div class="t-cat" style="color:rgba(255,255,255,.7)">官方文档 · 原文</div>
+          <h2 style="font-family:var(--sans),var(--sans-zh);font-weight:200;font-size:min(3.4vw,6.2vh);line-height:.98;letter-spacing:-.03em;color:#fff;margin:0">把外部服务<br>接进工作流</h2>
+          <div style="color:rgba(255,255,255,.92);font-family:var(--sans),var(--sans-zh);font-size:max(15px,1vw);line-height:1.62;border-top:1px solid rgba(255,255,255,.2);padding-top:1.8vh">连接器用于将 WorkBuddy 与外部服务对接，将外部数据和能力引入 AI 工作流。通过配置连接器，您可以让 WorkBuddy 在获得授权后访问和操作第三方服务，实现数据互通与能力扩展。</div>
+          <div style="display:flex;gap:.8vw;flex-wrap:wrap;margin-top:.4vh">
+            <span style="font-family:var(--mono);font-size:max(12px,.8vw);letter-spacing:.04em;color:rgba(255,255,255,.85);border:1px solid rgba(255,255,255,.35);padding:.5vh .7vw">AI 工作流</span>
+            <span style="font-family:var(--mono);font-size:max(12px,.8vw);letter-spacing:.04em;color:rgba(255,255,255,.85);border:1px solid rgba(255,255,255,.35);padding:.5vh .7vw">外部服务</span>
+            <span style="font-family:var(--mono);font-size:max(12px,.8vw);letter-spacing:.04em;color:#fff;border:1px solid rgba(255,255,255,.7);padding:.5vh .7vw">授权</span>
+          </div>
         </div>
       </div>
       <div class="half b-accent" style="padding:5.4vh 3.4vw 4vh;justify-content:space-between">
-        <div class="chrome-min" style="margin-bottom:0;color:rgba(255,255,255,.7)"><div class="l">PRINCIPLE · 双向通道</div><div class="r">WORKBUDDY</div></div>
-        <div style="display:flex;flex-direction:column;gap:2vh">
-          <h2 style="font-family:var(--sans),var(--sans-zh);font-weight:200;font-size:min(3.4vw,6.2vh);line-height:.98;letter-spacing:-.03em;color:#fff;margin:0">读得进来<br>也写得出去</h2>
-          <div style="display:flex;flex-direction:column;gap:1.2vh;border-top:1px solid rgba(255,255,255,.3);padding-top:1.8vh">
-            <div style="display:grid;grid-template-columns:8ch 1fr;gap:1vw;color:rgba(255,255,255,.92);font-size:max(15px,1vw);line-height:1.5"><span style="font-family:var(--mono);opacity:.75">输入端</span><span>读活动策划方案与官方素材</span></div>
-            <div style="display:grid;grid-template-columns:8ch 1fr;gap:1vw;color:rgba(255,255,255,.92);font-size:max(15px,1vw);line-height:1.5"><span style="font-family:var(--mono);opacity:.75">输出端</span><span>把成果写进腾讯问卷</span></div>
+        <div class="chrome-min" style="margin-bottom:0;color:rgba(255,255,255,.7)"><div class="l">PRINCIPLE · 官方补充</div><div class="r">WORKBUDDY</div></div>
+        <div style="display:flex;flex-direction:column;gap:1.8vh">
+          <h2 style="font-family:var(--sans),var(--sans-zh);font-weight:200;font-size:min(3.4vw,6.2vh);line-height:.98;letter-spacing:-.03em;color:#fff;margin:0">官方还说了<br>三件事</h2>
+          <div style="display:flex;flex-direction:column;gap:1.3vh;border-top:1px solid rgba(255,255,255,.3);padding-top:1.8vh">
+            <div style="display:grid;grid-template-columns:7ch 1fr;gap:1vw;color:rgba(255,255,255,.92);font-size:max(14px,.95vw);line-height:1.55"><span style="font-family:var(--mono);opacity:.75">形态</span><span>MCP + CLI（标准化协议）与 Skill + CLI（内置脚本），数据收集与权限边界一致。</span></div>
+            <div style="display:grid;grid-template-columns:7ch 1fr;gap:1vw;color:rgba(255,255,255,.92);font-size:max(14px,.95vw);line-height:1.55"><span style="font-family:var(--mono);opacity:.75">已支持</span><span>QQ 邮箱、腾讯文档、腾讯乐享、腾讯会议、TAPD、腾讯网盘等，另支持自定义连接器。</span></div>
+            <div style="display:grid;grid-template-columns:7ch 1fr;gap:1vw;color:rgba(255,255,255,.92);font-size:max(14px,.95vw);line-height:1.55"><span style="font-family:var(--mono);opacity:.75">条款</span><span>新增连接器后，相关隐私协议条款将同步更新。</span></div>
           </div>
-          <div class="t-body-sm" style="color:rgba(255,255,255,.9);line-height:1.6">生成文件之外，还能在真实平台上把东西建出来。</div>
+          <div class="t-body-sm" style="color:rgba(255,255,255,.9);line-height:1.55;border-top:1px solid rgba(255,255,255,.3);padding-top:1.3vh">课堂用的腾讯问卷连接器是会话内官方插件，授权以现场页面提示为准。</div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ============ 06 · 连接器能做的四类事 ============ -->
+<!-- ============ 06 · 连接器能做的四类事（官方表格） ============ -->
 <section class="slide light" data-animate="grid-reveal" data-layout="S15">
   <div class="canvas-card">
     <div class="chrome-min"><div class="l">PRINCIPLE · 四类能力</div><div class="r">06 / 20</div></div>
     <div style="flex:1;padding:0;display:flex;flex-direction:column;gap:2vh;position:relative;z-index:1">
       <div data-anim="line" style="display:flex;flex-direction:column;gap:1.2vh">
-        <div class="t-cat accent">读、写、查、送</div>
+        <div class="t-cat accent">官方 · 连接器能做什么</div>
         <h2 style="font-family:var(--sans),var(--sans-zh);font-weight:200;font-size:min(4.6vw,8vh);line-height:1.02;letter-spacing:-.03em">连接器能做的四类事</h2>
       </div>
       <div data-anim="up" style="display:grid;grid-template-columns:repeat(4,1fr);gap:1.4vw;flex:1">
         <div class="sub-card" style="justify-content:center;padding:2.2vh 1.4vw">
           <div class="nb-corner">01</div>
           <div class="ttl" style="margin-top:2.4vh;font-size:max(17px,1.22vw)">数据查询</div>
-          <div class="desc" style="margin-top:1vh">检索素材文档，读取方案里的时间与地点。</div>
+          <div class="desc" style="margin-top:1vh;opacity:1;font-size:max(13px,.86vw);line-height:1.5">
+            <div style="font-weight:600">从外部数据源获取信息</div>
+            <div style="opacity:.65;margin-top:1vh">官方示例：查询数据库、检索文档</div>
+            <div style="margin-top:1vh;color:var(--accent);font-weight:600">本场：读方案与官方素材</div>
+          </div>
         </div>
         <div class="sub-card accent" style="justify-content:center;padding:2.2vh 1.4vw">
           <div class="nb-corner">02</div>
           <div class="ttl" style="margin-top:2.4vh;font-size:max(17px,1.22vw)">服务调用</div>
-          <div class="desc" style="margin-top:1vh;color:rgba(255,255,255,.92)">创建在线问卷、回读结构、修改单题。本场重点。</div>
+          <div class="desc" style="margin-top:1vh;opacity:1;color:rgba(255,255,255,.94);font-size:max(13px,.86vw);line-height:1.5">
+            <div style="font-weight:600">调用第三方 API 完成操作</div>
+            <div style="opacity:.75;margin-top:1vh">官方示例：发送邮件、创建日程</div>
+            <div style="margin-top:1vh;font-weight:600">本场：创建在线问卷（重点）</div>
+          </div>
         </div>
         <div class="sub-card" style="justify-content:center;padding:2.2vh 1.4vw">
           <div class="nb-corner">03</div>
           <div class="ttl" style="margin-top:2.4vh;font-size:max(17px,1.22vw)">文件管理</div>
-          <div class="desc" style="margin-top:1vh">读方案文件，读官方图片与参考资料。</div>
+          <div class="desc" style="margin-top:1vh;opacity:1;font-size:max(13px,.86vw);line-height:1.5">
+            <div style="font-weight:600">访问云端存储与文件系统</div>
+            <div style="opacity:.65;margin-top:1vh">官方示例：读取网盘文件、上传附件</div>
+            <div style="margin-top:1vh;color:var(--accent);font-weight:600">本场：读方案文件与官方图片</div>
+          </div>
         </div>
         <div class="sub-card" style="justify-content:center;padding:2.2vh 1.4vw">
           <div class="nb-corner">04</div>
           <div class="ttl" style="margin-top:2.4vh;font-size:max(17px,1.22vw)">消息通知</div>
-          <div class="desc" style="margin-top:1vh">把投放链接交到后续物料里继续使用。</div>
+          <div class="desc" style="margin-top:1vh;opacity:1;font-size:max(13px,.86vw);line-height:1.5">
+            <div style="font-weight:600">与即时通讯工具集成</div>
+            <div style="opacity:.65;margin-top:1vh">官方示例：发送企业微信 / 飞书消息</div>
+            <div style="margin-top:1vh;color:var(--accent);font-weight:600">本场：把投放链接交到后续物料</div>
+          </div>
         </div>
       </div>
-      <div class="t-body-sm" style="border-top:1px solid var(--border-subtle);padding-top:1.4vh">四类本场都会用到。前三类把材料接进来，第四类把成果送出去。</div>
+      <div class="t-body-sm" style="border-top:1px solid var(--border-subtle);padding-top:1.4vh">官方原文：在任务中调用外部服务的能力。服务调用包含写入；用户写入数据需明确指令确认。</div>
     </div>
   </div>
 </section>
@@ -1459,71 +1481,83 @@
   </div>
 </section>
 
-<!-- ============ 08 · 添加、启用与失效重连 ============ -->
+<!-- ============ 08 · 从添加到停止使用（官方生命周期） ============ -->
 <section class="slide light" data-animate="four-cards" data-layout="S11">
   <div class="canvas-card">
-    <div class="chrome-min"><div class="l">PRINCIPLE · 生命周期</div><div class="r">08 / 20</div></div>
+    <div class="chrome-min"><div class="l">PRINCIPLE · 配置与使用</div><div class="r">08 / 20</div></div>
     <div style="flex:1;padding:0;display:flex;flex-direction:column;gap:2vh;position:relative;z-index:1">
       <div data-anim="line" style="display:flex;flex-direction:column;gap:1.2vh">
-        <div class="t-cat accent">从装上到解绑</div>
-        <h2 style="font-family:var(--sans),var(--sans-zh);font-weight:200;font-size:min(4.6vw,8vh);line-height:1.02;letter-spacing:-.03em">添加、启用与失效重连</h2>
+        <div class="t-cat accent">官方 · 连接器的配置与使用</div>
+        <h2 style="font-family:var(--sans),var(--sans-zh);font-weight:200;font-size:min(4.6vw,8vh);line-height:1.02;letter-spacing:-.03em">从添加到停止使用</h2>
       </div>
       <div data-anim="up" style="display:grid;grid-template-columns:repeat(4,1fr);gap:1.4vw;flex:1">
         <div class="sub-card" style="justify-content:center;padding:2.2vh 1.4vw">
           <div class="nb-corner">01</div>
           <div class="ttl" style="margin-top:2.4vh;font-size:max(17px,1.22vw)">添加</div>
-          <div class="desc" style="margin-top:1vh">连接器页签 → 卡片右上「+」→ 登录授权。</div>
+          <div class="desc" style="margin-top:1vh;opacity:1;font-size:max(13px,.86vw);line-height:1.55">侧边栏「专家·技能·连接器」→ 连接器页签 → 卡片右上「+」→ 按提示登录、授权或配置。<br><span style="opacity:.7">完成后即可使用。</span></div>
         </div>
         <div class="sub-card" style="justify-content:center;padding:2.2vh 1.4vw">
           <div class="nb-corner">02</div>
-          <div class="ttl" style="margin-top:2.4vh;font-size:max(17px,1.22vw)">三种启用</div>
-          <div class="desc" style="margin-top:1vh">管理页「去对话」；创建任务时「+ &gt; 连接器」；执行中按需连接并自动继续。</div>
+          <div class="ttl" style="margin-top:2.4vh;font-size:max(17px,1.22vw)">三种使用方式</div>
+          <div class="desc" style="margin-top:1vh;opacity:1;font-size:max(13px,.86vw);line-height:1.55">管理页「去对话」；创建任务时「+ &gt; 连接器」启用；执行中按需连接，授权后自动继续当前任务。</div>
         </div>
         <div class="sub-card accent" style="justify-content:center;padding:2.2vh 1.4vw">
           <div class="nb-corner">03</div>
-          <div class="ttl" style="margin-top:2.4vh;font-size:max(17px,1.22vw)">授权失效</div>
-          <div class="desc" style="margin-top:1vh;color:rgba(255,255,255,.92)">认「需要重新连接」卡片，重新连接后只自动重试那一步。</div>
+          <div class="ttl" style="margin-top:2.4vh;font-size:max(17px,1.22vw)">授权失效重连</div>
+          <div class="desc" style="margin-top:1vh;opacity:1;color:rgba(255,255,255,.94);font-size:max(13px,.86vw);line-height:1.55">认「需要重新连接」卡片，重新连接后只自动重试那一步。网络超时、服务异常、无权限不会出现这张卡片。</div>
         </div>
         <div class="sub-card" style="justify-content:center;padding:2.2vh 1.4vw">
           <div class="nb-corner">04</div>
-          <div class="ttl" style="margin-top:2.4vh;font-size:max(17px,1.22vw)">停用与解绑</div>
-          <div class="desc" style="margin-top:1vh">任务内关掉启用状态；管理页解绑，通道即消失。</div>
+          <div class="ttl" style="margin-top:2.4vh;font-size:max(17px,1.22vw)">停止与解绑</div>
+          <div class="desc" style="margin-top:1vh;opacity:1;font-size:max(13px,.86vw);line-height:1.55">任务内关掉启用状态；管理页解绑恢复未连接。对话里可安装、查看、卸载，内置连接器不支持卸载。</div>
         </div>
       </div>
-      <div class="t-body-sm" style="border-top:1px solid var(--border-subtle);padding-top:1.4vh">通道要一直亮着，材料才在场。授权失效只重试一步，不会把整个任务重跑。</div>
+      <div style="display:flex;flex-direction:column;gap:.8vh;border-top:1px solid var(--border-subtle);padding-top:1.4vh">
+        <div class="t-body-sm">授权页要看清权限清单：QQ 邮箱列出账号信息、读取近一个月邮件、代为发送、删除（可选）；腾讯乐享写明「通过乐享知识库 MCP」按已有权限访问。连接完成显示绿色圆点与「去对话」。</div>
+        <div class="t-meta" style="color:var(--text-helper)">只有授权失效才出现重连卡片；同一步骤只自动重试一次。「已授权但当前关闭」的连接器平时不参与任务，容易被遗忘。</div>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- ============ 09 · 权限边界三条 ============ -->
-<section class="slide light" data-animate="three-forces" data-layout="S13">
+<!-- ============ 09 · 接上之后的数据边界（官方注意事项） ============ -->
+<section class="slide light" data-animate="grid-reveal" data-layout="S15">
   <div class="canvas-card">
-    <div class="chrome-min"><div class="l">PRINCIPLE · 权限边界</div><div class="r">09 / 20</div></div>
-    <div style="flex:1;padding:0;display:flex;flex-direction:column;gap:2vh;position:relative;z-index:1">
+    <div class="chrome-min"><div class="l">PRINCIPLE · 数据与边界</div><div class="r">09 / 20</div></div>
+    <div style="flex:1;padding:0;display:flex;flex-direction:column;gap:1.8vh;position:relative;z-index:1">
       <div data-anim="line" style="display:flex;flex-direction:column;gap:1.2vh">
-        <div class="t-cat accent">用得放心，才敢把素材放进来</div>
-        <h2 style="font-family:var(--sans),var(--sans-zh);font-weight:200;font-size:min(4.6vw,8vh);line-height:1.02;letter-spacing:-.03em">权限边界三条</h2>
+        <div class="t-cat accent">官方 · 信息收集与使用</div>
+        <h2 style="font-family:var(--sans),var(--sans-zh);font-weight:200;font-size:min(4.6vw,8vh);line-height:1.02;letter-spacing:-.03em">接上之后的数据边界</h2>
       </div>
-      <div data-anim="up" style="flex:1;display:grid;grid-template-columns:repeat(3,1fr);gap:2vw;align-content:center">
-        <div style="display:flex;flex-direction:column;gap:1.2vh;border-top:3px solid var(--ink);padding-top:2vh">
-          <div style="font-family:var(--mono);font-size:max(13px,.88vw);letter-spacing:.16em;color:var(--grey-3)">01</div>
-          <div style="font-family:var(--sans),var(--sans-zh);font-weight:300;font-size:max(19px,1.8vw);line-height:1.2">每个连接器独立授权</div>
-          <div class="t-body-sm">授权范围只覆盖这一个服务，不会顺带放开别处。</div>
+      <div data-anim="up" style="display:grid;grid-template-columns:1.35fr 1fr;gap:2vw;flex:1">
+        <div style="display:flex;flex-direction:column;border-top:2px solid var(--ink)">
+          <div style="display:grid;grid-template-columns:12ch 6ch 1fr;gap:.8vw;padding:1vh 0;border-bottom:1px solid var(--border-strong)">
+            <div class="t-cat">收集项</div><div class="t-cat">类型</div><div class="t-cat">官方用途</div>
+          </div>
+          <div style="display:grid;grid-template-columns:12ch 6ch 1fr;gap:.8vw;align-items:center;padding:1vh 0;border-bottom:1px solid var(--border-subtle);flex:1;font-size:max(12.5px,.83vw);line-height:1.45">
+            <div style="font-weight:600">第三方账号标识</div><div class="t-meta">必要</div><div>邮箱地址、账号 ID 等，用于在第三方服务中识别身份</div>
+          </div>
+          <div style="display:grid;grid-template-columns:12ch 6ch 1fr;gap:.8vw;align-items:center;padding:1vh 0;border-bottom:1px solid var(--border-subtle);flex:1;font-size:max(12.5px,.83vw);line-height:1.45">
+            <div style="font-weight:600">授权凭据</div><div class="t-meta">必要</div><div>OAuth Access / Refresh Token，或手动填写的 API 密钥</div>
+          </div>
+          <div style="display:grid;grid-template-columns:12ch 6ch 1fr;gap:.8vw;align-items:center;padding:1vh 0;border-bottom:1px solid var(--border-subtle);flex:1;font-size:max(12.5px,.83vw);line-height:1.45">
+            <div style="font-weight:600">第三方业务数据</div><div class="t-meta">必要</div><div>仅在您的指令触发时按需读取（邮件、文档、知识库、会议、TAPD 项目数据等）</div>
+          </div>
+          <div style="display:grid;grid-template-columns:12ch 6ch 1fr;gap:.8vw;align-items:center;padding:1vh .6vw;background:rgba(var(--accent-rgb),.07);border-left:3px solid var(--accent);flex:1;font-size:max(12.5px,.83vw);line-height:1.45">
+            <div style="font-weight:600">用户写入数据</div><div class="t-meta">非必要</div><div>代发邮件、创建 / 编辑文档、创建会议等，<span style="color:var(--accent);font-weight:600">需您明确指令确认</span></div>
+          </div>
         </div>
-        <div style="display:flex;flex-direction:column;gap:1.2vh;border-top:3px solid var(--ink);padding-top:2vh">
-          <div style="font-family:var(--mono);font-size:max(13px,.88vw);letter-spacing:.16em;color:var(--grey-3)">02</div>
-          <div style="font-family:var(--sans),var(--sans-zh);font-weight:300;font-size:max(19px,1.8vw);line-height:1.2">不主动定时抓取</div>
-          <div class="t-body-sm">没有你的指令，它不会自己跑去找数据。</div>
-        </div>
-        <div style="display:flex;flex-direction:column;gap:1.2vh;border-top:3px solid var(--accent);padding-top:2vh">
-          <div style="font-family:var(--mono);font-size:max(13px,.88vw);letter-spacing:.16em;color:var(--accent)">03</div>
-          <div style="font-family:var(--sans),var(--sans-zh);font-weight:300;font-size:max(19px,1.8vw);line-height:1.2;color:var(--accent)">不超出已有权限范围</div>
-          <div class="t-body-sm">拿不到的文件，不会绕过去拿。</div>
+        <div style="display:flex;flex-direction:column;gap:1.4vh;justify-content:center">
+          <div class="t-cat" style="color:var(--accent)">官方 · 权限边界三条</div>
+          <div style="border-top:3px solid var(--ink);padding-top:1.2vh;font-family:var(--sans),var(--sans-zh);font-weight:300;font-size:max(16px,1.35vw);line-height:1.25">每个连接器独立授权</div>
+          <div style="border-top:3px solid var(--ink);padding-top:1.2vh;font-family:var(--sans),var(--sans-zh);font-weight:300;font-size:max(16px,1.35vw);line-height:1.25">不主动定时抓取</div>
+          <div style="border-top:3px solid var(--accent);padding-top:1.2vh;font-family:var(--sans),var(--sans-zh);font-weight:300;font-size:max(16px,1.35vw);line-height:1.25;color:var(--accent)">不超出您已有权限范围</div>
+          <div class="t-meta" style="color:var(--text-helper);line-height:1.5;border-top:1px solid var(--border-subtle);padding-top:1.2vh">连接器自身的读写不消耗积分；WorkBuddy 对外部数据进行理解、汇总时会消耗积分。</div>
         </div>
       </div>
-      <div style="display:flex;flex-direction:column;gap:.9vh;border-top:1px solid var(--border-subtle);padding-top:1.5vh">
-        <div class="t-body-sm">创建问卷属于对第三方服务写入，需要明确指令；发布投放链接与修改已发布内容之前，再确认一次。</div>
-        <div class="t-meta" style="color:var(--text-helper)">网络超时、服务异常、无权限不会出现重连卡片。</div>
+      <div style="display:flex;flex-direction:column;gap:.7vh;border-top:1px solid var(--border-subtle);padding-top:1.3vh">
+        <div class="t-body-sm">官方使用建议：访问、读写与消息发送均以本人身份与授权范围执行；涉及对外发送、内容修改前再次确认目标对象与内容，不再使用的连接器及时撤销授权。</div>
+        <div class="t-meta" style="color:var(--text-helper)">课堂纪律由此推出：创建问卷属于用户写入数据，需明确指令；发布投放链接与修改已发布内容前再确认一次。</div>
       </div>
     </div>
   </div>
